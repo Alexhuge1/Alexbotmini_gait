@@ -61,8 +61,8 @@ class alexbotminiCfg(LeggedRobotCfg):
         foot_name = "6"
         knee_name = "4"
 
-        terminate_after_contacts_on = ['base_link','1','2','3','4','5']
-        penalize_contacts_on = ["base_link"]
+        terminate_after_contacts_on = ['base_link','rightlink2','leftlink2']
+        penalize_contacts_on = ['base_link','rightlink2','leftlink2']
         self_collisions = 1  # 1 to disable, 0 to enable...bitwise filter
         flip_visual_attachments = False
         replace_cylinder_with_capsule = False
@@ -98,27 +98,27 @@ class alexbotminiCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.73]
+        pos = [0.0, 0.0, 0.70]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
-            'leftjoint1': -0,
+            'leftjoint1': 0.3,
             'leftjoint2': 0.,
             'leftjoint3': 0.,
-            'leftjoint4': 0.,
-            'leftjoint5': -0.,
+            'leftjoint4': -0.8,
+            'leftjoint5': 0.5,
             'leftjoint6': 0.,
-            'rightjoint1': 0.,
+            'rightjoint1': -0.3,
             'rightjoint2': 0.,
             'rightjoint3': 0.,
-            'rightjoint4': -0.,
-            'rightjoint5': 0.,
+            'rightjoint4': 0.8,
+            'rightjoint5': -0.5,
             'rightjoint6': 0.,
         }
 
     class control(LeggedRobotCfg.control):
         # PD Drive parameters:
-        stiffness = {'1': 30.0, '2': 30.0, '3': 30.0, '4': 30.0, '5': 10 , '6': 10}
-        damping = {'1': 5, '2': 5, '3': 5, '4': 5, '5': 3, '6' : 3}
+        stiffness = {'1': 60.0, '2': 40.0, '3': 30.0, '4': 60.0, '5': 9 , '6': 9}
+        damping = {'1': 2, '2': 1, '3': 1, '4': 2, '5': 0.3, '6' : 0.3}
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT
@@ -171,35 +171,35 @@ class alexbotminiCfg(LeggedRobotCfg):
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
-        target_joint_pos_scale = 0.17    # rad
-        target_feet_height = 0.04       # m
+        target_joint_pos_scale = 0.25    # rad
+        target_feet_height = 0.08       # m
         cycle_time = 0.64                # sec
         # if true negative total rewards are clipped at zero (avoids early termination problems)
         only_positive_rewards = False
         # tracking reward = exp(error*sigma)
-        tracking_sigma = 4
-        max_contact_force = 400  # Forces above this value are penalized
+        tracking_sigma = 5
+        max_contact_force = 200  # Forces above this value are penalized
 
         class scales:
             # reference motion tracking
-            joint_pos = 1.6
-            feet_clearance = 1.
-            feet_contact_number = 1.2
+            joint_pos = 2.0
+            feet_clearance = 2.0
+            feet_contact_number = 2.5
             # gait
-            feet_air_time = 0.5
-            foot_slip = -0.05
+            feet_air_time = 2.5
+            foot_slip = -0.1
             feet_distance = 0.2
             knee_distance = 0.2
             # contact
             feet_contact_forces = -0.01
             # vel tracking
-            tracking_lin_vel = 1.2
+            tracking_lin_vel = 1.4
             tracking_ang_vel = 1.1
             vel_mismatch_exp = 0.5  # lin_z; ang x,y
             low_speed = 0.2
             track_vel_hard = 0.5
             # base pos
-            default_joint_pos = 0.5
+            default_joint_pos = 0.35
             orientation = 1.
             base_height = 0.2
             base_acc = 0.2

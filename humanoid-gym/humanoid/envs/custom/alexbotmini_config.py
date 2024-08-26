@@ -117,8 +117,8 @@ class alexbotminiCfg(LeggedRobotCfg):
 
     class control(LeggedRobotCfg.control):
         # PD Drive parameters:
-        stiffness = {'1': 60.0, '2': 40.0, '3': 30.0, '4': 60.0, '5': 9 , '6': 9}
-        damping = {'1': 2, '2': 1, '3': 1, '4': 2, '5': 0.3, '6' : 0.3}
+        stiffness = {'1': 120.0, '2': 80.0, '3': 80.0, '4': 120.0, '5': 12 , '6': 12}
+        damping = {'1': 3, '2': 2, '3': 2, '4': 3, '5': 0.3, '6' : 0.3}
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT

@@ -76,7 +76,7 @@ class alexbotminiFreeEnv(LeggedRobot):
     '''
     def __init__(self, cfg: LeggedRobotCfg, sim_params, physics_engine, sim_device, headless):
         super().__init__(cfg, sim_params, physics_engine, sim_device, headless)
-        self.last_feet_z = 0.033
+        self.last_feet_z = 0.05
         self.feet_height = torch.zeros((self.num_envs, 2), device=self.device)
         self.reset_idx(torch.tensor(range(self.num_envs), device=self.device))
         self.compute_observations()
@@ -381,7 +381,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         stance_mask = self._get_gait_phase()
         measured_heights = torch.sum(
             self.rigid_state[:, self.feet_indices, 2] * stance_mask, dim=1) / torch.sum(stance_mask, dim=1)
-        base_height = self.root_states[:, 2] - (measured_heights - 0.033)
+        base_height = self.root_states[:, 2] - (measured_heights - 0.05)
         return torch.exp(-torch.abs(base_height - self.cfg.rewards.base_height_target) * 100)
 
     def _reward_base_acc(self):
@@ -453,7 +453,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         contact = self.contact_forces[:, self.feet_indices, 2] > 5.
 
         # Get the z-position of the feet and compute the change in z-position
-        feet_z = self.rigid_state[:, self.feet_indices, 2] - 0.033
+        feet_z = self.rigid_state[:, self.feet_indices, 2] - 0.05
         delta_z = feet_z - self.last_feet_z
         self.feet_height += delta_z
         self.last_feet_z = feet_z

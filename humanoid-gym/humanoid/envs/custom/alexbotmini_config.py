@@ -101,17 +101,17 @@ class alexbotminiCfg(LeggedRobotCfg):
         pos = [0.0, 0.0, 0.70]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
-            'leftjoint1': 0.3,
+            'leftjoint1': -0.3,
             'leftjoint2': 0.,
             'leftjoint3': 0.,
-            'leftjoint4': -0.8,
-            'leftjoint5': 0.5,
+            'leftjoint4': 0.8,
+            'leftjoint5': -0.5,
             'leftjoint6': 0.,
-            'rightjoint1': -0.3,
+            'rightjoint1': 0.3,
             'rightjoint2': 0.,
             'rightjoint3': 0.,
-            'rightjoint4': 0.8,
-            'rightjoint5': -0.5,
+            'rightjoint4': -0.8,
+            'rightjoint5': 0.5,
             'rightjoint6': 0.,
         }
 

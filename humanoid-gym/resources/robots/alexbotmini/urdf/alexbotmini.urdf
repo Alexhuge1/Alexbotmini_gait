@@ -36,11 +36,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.01 0.1 -0.05"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/base_link.STL" />
+        <box size="0.16 0.2 0.15"/>
       </geometry>
     </collision>
   </link>
@@ -74,15 +73,6 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../meshes/rightlink1.STL" />
-      </geometry>
-    </collision>
   </link>
   <joint
     name="rightjoint1"
@@ -134,11 +124,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0.01 0.05 -0.1"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/rightlink2.STL" />
+        <box size="0.08 0.15 0.2"/>
       </geometry>
     </collision>
   </link>
@@ -192,11 +181,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0.0 -0.14"
+        rpy="0 1.57 0" />
       <geometry>
-        <mesh
-          filename="../meshes/rightlink3.STL" />
+        <cylinder length="0.1" radius="0.045"/>
       </geometry>
     </collision>
   </link>
@@ -250,11 +238,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.015 0.0 -0.15"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/rightlink4.STL" />
+        <box size="0.07 0.1 0.15"/>
       </geometry>
     </collision>
   </link>
@@ -358,11 +345,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0.0 0.045 -0.048"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/rightlink6.STL" />
+        <box size="0.1 0.24 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -379,8 +365,8 @@
     <axis
       xyz="-0 -1 -0" />
     <limit
-      lower="-0.3"
-      upper="0.3"
+      lower="-0.5"
+      upper="0.5"
       effort="30"
       velocity="130" />
   </joint>
@@ -414,15 +400,6 @@
           rgba="0.79216 0.81961 0.93333 1" />
       </material>
     </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="../meshes/leftlink1.STL" />
-      </geometry>
-    </collision>
   </link>
   <joint
     name="leftjoint1"
@@ -474,11 +451,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.01 0.05 -0.1"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/leftlink2.STL" />
+        <box size="0.08 0.15 0.2"/>
       </geometry>
     </collision>
   </link>
@@ -532,11 +508,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
+        xyz="0 0.0 -0.14"
+        rpy="0 1.57 0" />
       <geometry>
-        <mesh
-          filename="../meshes/leftlink3.STL" />
+        <cylinder length="0.1" radius="0.045"/>
       </geometry>
     </collision>
   </link>
@@ -588,13 +563,12 @@
           rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
-    <collision>
+   <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0.015 0.0 -0.15"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/leftlink4.STL" />
+        <box size="0.07 0.1 0.15"/>
       </geometry>
     </collision>
   </link>
@@ -698,11 +672,10 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0.0 0.045 -0.048"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="../meshes/leftlink6.STL" />
+        <box size="0.1 0.24 0.01"/>
       </geometry>
     </collision>
   </link>
@@ -719,8 +692,8 @@
     <axis
       xyz="-0 1 0" />
     <limit
-      lower="-0.3"
-      upper="0.3"
+      lower="-0.5"
+      upper="0.5"
       effort="30"
       velocity="130" />
   </joint>

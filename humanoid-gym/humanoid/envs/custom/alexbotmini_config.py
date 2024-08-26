@@ -161,8 +161,8 @@ class alexbotminiCfg(LeggedRobotCfg):
         heading_command = True  # if true: compute ang vel command from heading error
 
         class ranges:
-            lin_vel_x = [-0.2, 0.4]  # min max [m/s]
-            lin_vel_y = [-0.2, 0.2]   # min max [m/s]
+            lin_vel_x = [-0.3, 0.6]  # min max [m/s]
+            lin_vel_y = [-0.3, 0.3]   # min max [m/s]
             ang_vel_yaw = [-0.3, 0.3]    # min max [rad/s]
             heading = [-3.14, 3.14]
 
@@ -172,7 +172,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
         target_joint_pos_scale = 0.25    # rad
-        target_feet_height = 0.08       # m
+        target_feet_height = 0.12       # m
         cycle_time = 0.64                # sec
         # if true negative total rewards are clipped at zero (avoids early termination problems)
         only_positive_rewards = False
@@ -187,7 +187,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             feet_contact_number = 2.5
             # gait
             feet_air_time = 2.5
-            foot_slip = -0.1
+            foot_slip = -0.12
             feet_distance = 0.2
             knee_distance = 0.2
             # contact

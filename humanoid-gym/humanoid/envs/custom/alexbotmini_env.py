@@ -207,7 +207,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         cos_pos = torch.cos(2 * torch.pi * phase).unsqueeze(1)
 
         stance_mask = self._get_gait_phase()
-        contact_mask = self.contact_forces[:, self.feet_indices, 2] > 2.
+        contact_mask = self.contact_forces[:, self.feet_indices, 2] > 5.
 
         self.command_input = torch.cat(
             (sin_pos, cos_pos, self.commands[:, :3] * self.commands_scale), dim=1)
@@ -312,7 +312,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         and the speed of the feet. A contact threshold is used to determine if the foot is in contact 
         with the ground. The speed of the foot is calculated and scaled by the contact condition.
         """
-        contact = self.contact_forces[:, self.feet_indices, 2] > 2.
+        contact = self.contact_forces[:, self.feet_indices, 2] > 5.
         foot_speed_norm = torch.norm(self.rigid_state[:, self.feet_indices, 10:12], dim=2)
         rew = torch.sqrt(foot_speed_norm)
         rew *= contact
@@ -324,7 +324,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         checking the first contact with the ground after being in the air. The air time is
         limited to a maximum value for reward calculation.
         """
-        contact = self.contact_forces[:, self.feet_indices, 2] > 2.
+        contact = self.contact_forces[:, self.feet_indices, 2] > 5.
         stance_mask = self._get_gait_phase()
         self.contact_filt = torch.logical_or(torch.logical_or(contact, stance_mask), self.last_contacts)
         self.last_contacts = contact
@@ -339,7 +339,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         Calculates a reward based on the number of feet contacts aligning with the gait phase. 
         Rewards or penalizes depending on whether the foot contact matches the expected gait phase.
         """
-        contact = self.contact_forces[:, self.feet_indices, 2] > 2.
+        contact = self.contact_forces[:, self.feet_indices, 2] > 5.
         stance_mask = self._get_gait_phase()
         reward = torch.where(contact == stance_mask, 1, -0.3)
         return torch.mean(reward, dim=1)
@@ -450,7 +450,7 @@ class alexbotminiFreeEnv(LeggedRobot):
         Encourages appropriate lift of the feet during the swing phase of the gait.
         """
         # Compute feet contact mask
-        contact = self.contact_forces[:, self.feet_indices, 2] > 2.
+        contact = self.contact_forces[:, self.feet_indices, 2] > 5.
 
         # Get the z-position of the feet and compute the change in z-position
         feet_z = self.rigid_state[:, self.feet_indices, 2] - 0.033

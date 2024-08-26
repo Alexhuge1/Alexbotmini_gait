@@ -61,8 +61,8 @@ class alexbotminiCfg(LeggedRobotCfg):
         foot_name = "6"
         knee_name = "4"
 
-        terminate_after_contacts_on = ['base_link','rightlink2','leftlink2']
-        penalize_contacts_on = ['base_link','rightlink2','leftlink2']
+        terminate_after_contacts_on = ['dummy_link','rightlink2','leftlink2']
+        penalize_contacts_on = ['dummy_link','rightlink2','leftlink2']
         self_collisions = 1  # 1 to disable, 0 to enable...bitwise filter
         flip_visual_attachments = False
         replace_cylinder_with_capsule = False
@@ -161,13 +161,13 @@ class alexbotminiCfg(LeggedRobotCfg):
         heading_command = True  # if true: compute ang vel command from heading error
 
         class ranges:
-            lin_vel_x = [-0.3, 0.6]  # min max [m/s]
-            lin_vel_y = [-0.3, 0.3]   # min max [m/s]
+            lin_vel_x = [-0.3, 0.3]  # min max [m/s]
+            lin_vel_y = [-0.3, 0.6]   # min max [m/s]
             ang_vel_yaw = [-0.3, 0.3]    # min max [rad/s]
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.70
+        base_height_target = 0.65
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning

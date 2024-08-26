@@ -5,6 +5,9 @@
 <robot
   name="fftai_grmini">
   <link
+    name="dummy_link">
+  </link>
+  <link
     name="base_link">
     <inertial>
       <origin
@@ -43,6 +46,11 @@
       </geometry>
     </collision>
   </link>
+  <joint name="dummy_to_base_link" type="fixed">
+    <parent link="dummy_link"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 -1.5708" xyz="0 0 0"/>
+  </joint>
   <link
     name="rightlink1">
     <inertial>

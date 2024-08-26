@@ -669,6 +669,7 @@ class LeggedRobot(BaseTask):
         self.feet_indices = torch.zeros(len(feet_names), dtype=torch.long, device=self.device, requires_grad=False)
         for i in range(len(feet_names)):
             self.feet_indices[i] = self.gym.find_actor_rigid_body_handle(self.envs[0], self.actor_handles[0], feet_names[i])
+            print(f"Foot {feet_names[i]} found at index {self.feet_indices[i]}")
         self.knee_indices = torch.zeros(len(knee_names), dtype=torch.long, device=self.device, requires_grad=False)
         for i in range(len(knee_names)):
             self.knee_indices[i] = self.gym.find_actor_rigid_body_handle(self.envs[0], self.actor_handles[0], knee_names[i])

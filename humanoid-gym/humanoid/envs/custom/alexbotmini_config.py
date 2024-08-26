@@ -147,7 +147,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         randomize_friction = True
         friction_range = [0.1, 2.0]
         randomize_base_mass = True
-        added_mass_range = [-2., 2.]
+        added_mass_range = [-1., 1.]
         push_robots = True
         push_interval_s = 4
         max_push_vel_xy = 0.2

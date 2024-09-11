@@ -1,4 +1,4 @@
-Adaptation of alexbotmini based on humanoidgym
+Adaptation for alexbotmini based on humanoidgym
 
 <div align="center">
     <img src="https://github.com/user-attachments/assets/d6edc27b-ad2c-4290-a87b-a92ae1ae7d7e" alt="图片描述1">

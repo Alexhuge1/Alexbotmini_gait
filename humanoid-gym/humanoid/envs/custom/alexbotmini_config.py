@@ -61,8 +61,8 @@ class alexbotminiCfg(LeggedRobotCfg):
         foot_name = "6"
         knee_name = "4"
 
-        terminate_after_contacts_on = ['base_link','rightlink2','leftlink2']
-        penalize_contacts_on = ['base_link','rightlink2','leftlink2']
+        terminate_after_contacts_on = ['dummy_link','rightlink2','leftlink2']
+        penalize_contacts_on = ['dummy_link','rightlink2','leftlink2']
         self_collisions = 1  # 1 to disable, 0 to enable...bitwise filter
         flip_visual_attachments = False
         replace_cylinder_with_capsule = False
@@ -168,7 +168,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.65
+        base_height_target = 0.75
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
@@ -179,7 +179,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         only_positive_rewards = False
         # tracking reward = exp(error*sigma)
         tracking_sigma = 5
-        max_contact_force = 200  # Forces above this value are penalized
+        max_contact_force = 300  # Forces above this value are penalized
 
         class scales:
             # reference motion tracking
@@ -189,8 +189,8 @@ class alexbotminiCfg(LeggedRobotCfg):
             # gait
             feet_air_time = 2.5
             foot_slip = -0.12
-            feet_distance = 0.2
-            knee_distance = 0.2
+            feet_distance = 0.3
+            knee_distance = 0.3
             # contact
             feet_contact_forces = -0.01
             # vel tracking

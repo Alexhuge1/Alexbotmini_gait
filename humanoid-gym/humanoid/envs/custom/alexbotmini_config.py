@@ -61,16 +61,17 @@ class alexbotminiCfg(LeggedRobotCfg):
         foot_name = "6"
         knee_name = "4"
 
-        terminate_after_contacts_on = ['dummy_link','rightlink2','leftlink2']
-        penalize_contacts_on = ['dummy_link','rightlink2','leftlink2']
+        terminate_after_contacts_on = ['base_link','rightlink2','leftlink2']
+        penalize_contacts_on = ['base_link','rightlink2','leftlink2']
         self_collisions = 1  # 1 to disable, 0 to enable...bitwise filter
         flip_visual_attachments = False
         replace_cylinder_with_capsule = False
         fix_base_link = False
 
     class terrain(LeggedRobotCfg.terrain):
-        #mesh_type = 'plane'
-        mesh_type = 'trimesh'
+        mesh_type = 'plane'
+        #mesh_type = 'trimesh'
+        #mesh_type = 'heightfield'
         curriculum = False
         # rough terrain only:
         measure_heights = False
@@ -98,21 +99,21 @@ class alexbotminiCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.70]
+        pos = [0.0, 0.0, 0.78]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'leftjoint1': -0.2,
             'leftjoint2': 0.,
             'leftjoint3': 0.,
-            'leftjoint4': 0.6,
-            'leftjoint5': -0.4,
-            'leftjoint6': 0.,
+            'leftjoint4': -0.6,
+            'leftjoint5': -0.,
+            'leftjoint6': 0.4,
             'rightjoint1': 0.2,
             'rightjoint2': 0.,
             'rightjoint3': 0.,
             'rightjoint4': -0.6,
-            'rightjoint5': 0.4,
-            'rightjoint6': 0.,
+            'rightjoint5': 0.,
+            'rightjoint6': 0.4,
         }
 
     class control(LeggedRobotCfg.control):
@@ -243,7 +244,7 @@ class alexbotminiCfgPPO(LeggedRobotCfgPPO):
         policy_class_name = 'ActorCritic'
         algorithm_class_name = 'PPO'
         num_steps_per_env = 60  # per iteration
-        max_iterations = 3000  # number of policy updates
+        max_iterations = 3001  # number of policy updates
 
         # logging
         save_interval = 100  # Please check for potential savings every `save_interval` iterations.

@@ -99,7 +99,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.78]
+        pos = [0.0, 0.0, 0.75]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'leftjoint1': -0.2,
@@ -189,8 +189,8 @@ class alexbotminiCfg(LeggedRobotCfg):
             # gait
             feet_air_time = 2.5
             foot_slip = -0.12
-            feet_distance = 0.3
-            knee_distance = 0.3
+            feet_distance = 0.4
+            knee_distance = 0.4
             # contact
             feet_contact_forces = -0.01
             # vel tracking

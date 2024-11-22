@@ -69,8 +69,9 @@ class alexbotminiCfg(LeggedRobotCfg):
         fix_base_link = False
 
     class terrain(LeggedRobotCfg.terrain):
-        #mesh_type = 'plane'
-        mesh_type = 'trimesh'
+        mesh_type = 'plane'
+        #mesh_type = 'trimesh'
+        #mesh_type = 'heightfield'
         curriculum = False
         # rough terrain only:
         measure_heights = False
@@ -98,21 +99,21 @@ class alexbotminiCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.70]
+        pos = [0.0, 0.0, 0.75]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'leftjoint1': -0.2,
             'leftjoint2': 0.,
             'leftjoint3': 0.,
-            'leftjoint4': 0.6,
-            'leftjoint5': -0.4,
-            'leftjoint6': 0.,
+            'leftjoint4': -0.6,
+            'leftjoint5': -0.,
+            'leftjoint6': 0.4,
             'rightjoint1': 0.2,
             'rightjoint2': 0.,
             'rightjoint3': 0.,
             'rightjoint4': -0.6,
-            'rightjoint5': 0.4,
-            'rightjoint6': 0.,
+            'rightjoint5': 0.,
+            'rightjoint6': 0.4,
         }
 
     class control(LeggedRobotCfg.control):
@@ -167,7 +168,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.65
+        base_height_target = 0.75
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
@@ -178,7 +179,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         only_positive_rewards = False
         # tracking reward = exp(error*sigma)
         tracking_sigma = 5
-        max_contact_force = 200  # Forces above this value are penalized
+        max_contact_force = 300  # Forces above this value are penalized
 
         class scales:
             # reference motion tracking
@@ -188,8 +189,8 @@ class alexbotminiCfg(LeggedRobotCfg):
             # gait
             feet_air_time = 2.5
             foot_slip = -0.12
-            feet_distance = 0.2
-            knee_distance = 0.2
+            feet_distance = 0.4
+            knee_distance = 0.4
             # contact
             feet_contact_forces = -0.01
             # vel tracking
@@ -243,7 +244,7 @@ class alexbotminiCfgPPO(LeggedRobotCfgPPO):
         policy_class_name = 'ActorCritic'
         algorithm_class_name = 'PPO'
         num_steps_per_env = 60  # per iteration
-        max_iterations = 3000  # number of policy updates
+        max_iterations = 3001  # number of policy updates
 
         # logging
         save_interval = 100  # Please check for potential savings every `save_interval` iterations.

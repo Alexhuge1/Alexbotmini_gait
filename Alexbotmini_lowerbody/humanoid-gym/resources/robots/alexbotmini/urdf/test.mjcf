@@ -1,0 +1,67 @@
+<mujoco model="alexbotmini">
+  <compiler angle="radian" />
+  <worldbody>
+    <body name="dummy_link">
+      <body name="base_link" quat="0.707105 0 0 -0.707108">
+        <inertial pos="-0.012071 0.11411 -0.041034" quat="0.00146049 0.71148 0.00136861 0.702703" mass="4" diaginertia="0.00455766 0.0044348 0.00286634" />
+        <geom size="0.08 0.1 0.075" pos="-0.01 0.1 -0.05" type="box" rgba="0.75294 0.75294 0.75294 1" />
+        <body name="rightlink1" pos="0.077476 0.11412 -0.078592">
+          <inertial pos="0.020658 -0.02507 0.0001248" quat="0.696333 0.694566 0.128618 0.127104" mass="0.44393" diaginertia="0.000970786 0.000740389 0.000578604" />
+          <joint name="rightjoint1" pos="0 0 0" axis="1 0 0" limited="true" range="-1 1" />
+          <body name="rightlink2" pos="0.052 -0.081598 0.00059629">
+            <inertial pos="0.0018778 0.014039 -0.072161" quat="0.702314 0.0670477 -0.0849537 0.703592" mass="0.95978" diaginertia="0.00354255 0.00345603 0.00116392" />
+            <joint name="rightjoint2" pos="0 0 0" axis="0 -1 0" limited="true" range="-0.2 0.3" />
+            <geom size="0.04 0.075 0.1" pos="0.01 0.05 -0.1" type="box" rgba="0.89804 0.91765 0.92941 1" />
+            <body name="rightlink3" pos="0.0040538 0.077296 -0.1589">
+              <inertial pos="0.0093209 -0.00020142 -0.048565" quat="0.999972 -0.000653563 -0.00409756 -0.00628251" mass="0.81499" diaginertia="0.00261135 0.00223234 0.0012056" />
+              <joint name="rightjoint3" pos="0 0 0" axis="0 0 -1" limited="true" range="-1 1" />
+              <geom size="0.045 0.05" pos="0 0 -0.14" quat="0.707388 0 0.706825 0" type="cylinder" rgba="0.89804 0.91765 0.92941 1" />
+              <body name="rightlink4" pos="0.03062 -0.000827 -0.14126">
+                <inertial pos="-0.014396 -0.0068674 -0.1157" quat="0.999041 -0.00580236 0.043287 0.00307627" mass="1.1424" diaginertia="0.00811334 0.00743073 0.00140954" />
+                <joint name="rightjoint4" pos="0 0 0" axis="1 0 0" limited="true" range="-1 1" />
+                <geom size="0.035 0.05 0.075" pos="-0.015 0 -0.15" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                <body name="rightlink5" pos="-0.017523 0.00046354 -0.29026">
+                  <inertial pos="-4.9539e-05 -0.007497 -0.00020767" quat="0.501167 0.502128 0.484844 0.511493" mass="0.017311" diaginertia="1.81605e-06 1.52904e-06 1.28001e-06" />
+                  <joint name="rightjoint5" pos="0 0 0" axis="1 0 0" limited="true" range="-1 1" />
+                  <body name="rightlink6">
+                    <inertial pos="0.0012128 0.01635 -0.031449" quat="0.489396 0.495849 -0.513334 0.501113" mass="0.45" diaginertia="0.00163935 0.00145418 0.000236241" />
+                    <joint name="rightjoint6" pos="0 0 0" axis="0 -1 0" limited="true" range="-0.5 0.5" />
+                    <geom size="0.05 0.12 0.005" pos="0 0.045 -0.048" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="leftlink1" pos="-0.10252 0.11412 -0.078592">
+          <inertial pos="-0.020802 -0.02507 8.2908e-05" quat="0.697812 0.693053 -0.128288 -0.127582" mass="0.44393" diaginertia="0.000971118 0.000740166 0.000578487" />
+          <joint name="leftjoint1" pos="0 0 0" axis="-1 0 0" limited="true" range="-1 1" />
+          <body name="leftlink2" pos="-0.052 -0.0816 1.2733e-05">
+            <inertial pos="0.0010709 0.01411 -0.072158" quat="0.703854 0.0715203 -0.0815398 0.702015" mass="0.95978" diaginertia="0.00354126 0.00345737 0.00116386" />
+            <joint name="leftjoint2" pos="0 0 0" axis="0 -1 0" limited="true" range="-0.3 0.2" />
+            <geom size="0.04 0.075 0.1" pos="-0.01 0.05 -0.1" type="box" rgba="0.89804 0.91765 0.92941 1" />
+            <body name="leftlink3" pos="0.0023389 0.077519 -0.15883">
+              <inertial pos="-0.0073431 -0.00047109 -0.049072" quat="0.999866 -0.00288943 -0.0160867 -0.00040898" mass="0.81627" diaginertia="0.00261146 0.00223573 0.00120231" />
+              <joint name="leftjoint3" pos="0 0 0" axis="0 0 -1" limited="true" range="-1 1" />
+              <geom size="0.045 0.05" pos="0 0 -0.14" quat="0.707388 0 0.706825 0" type="cylinder" rgba="0.89804 0.91765 0.92941 1" />
+              <body name="leftlink4" pos="-0.024903 -0.00058212 -0.14238">
+                <inertial pos="0.019103 -0.009378 -0.11487" quat="0.997814 -0.0165531 -0.0638891 -0.00325479" mass="1.1424" diaginertia="0.00811438 0.00743073 0.0014085" />
+                <joint name="leftjoint4" pos="0 0 0" axis="-1 0 0" limited="true" range="-1 1" />
+                <geom size="0.035 0.05 0.075" pos="0.015 0 -0.15" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                <body name="leftlink5" pos="0.029296 -0.0057869 -0.28923">
+                  <inertial pos="4.339e-05 -0.0074995 -7.6174e-05" quat="0.499676 0.497426 0.49518 0.50763" mass="0.017311" diaginertia="1.81605e-06 1.52902e-06 1.28003e-06" />
+                  <joint name="leftjoint5" pos="0 0 0" axis="-1 0 0" limited="true" range="-1 1" />
+                  <body name="leftlink6">
+                    <inertial pos="0.00011749 0.022694 -0.034357" quat="0.496133 0.497997 -0.50158 0.504251" mass="0.45" diaginertia="0.00252924 0.0022492 0.000344429" />
+                    <joint name="leftjoint6" pos="0 0 0" axis="0 1 0" limited="true" range="-0.5 0.5" />
+                    <geom size="0.05 0.12 0.005" pos="0 0.045 -0.048" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>

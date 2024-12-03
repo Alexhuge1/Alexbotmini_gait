@@ -1,0 +1,98 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"Link_head_yaw" [label="Link_head_yaw"];
+"Link_head_pitch" [label="Link_head_pitch"];
+"Link_waist_pitch" [label="Link_waist_pitch"];
+"Link_waist_roll" [label="Link_waist_roll"];
+"Link_waist_yaw" [label="Link_waist_yaw"];
+"Link_hip_l_roll" [label="Link_hip_l_roll"];
+"Link_hip_l_yaw" [label="Link_hip_l_yaw"];
+"Link_hip_l_pitch" [label="Link_hip_l_pitch"];
+"Link_knee_l_pitch" [label="Link_knee_l_pitch"];
+"Link_l_ankle_pitch" [label="Link_l_ankle_pitch"];
+"Link_l_ankle_roll" [label="Link_l_ankle_roll"];
+"Link_hip_r_roll" [label="Link_hip_r_roll"];
+"Link_hip_r_yaw" [label="Link_hip_r_yaw"];
+"Link_hip_r_pitch" [label="Link_hip_r_pitch"];
+"Link_knee_r_pitch" [label="Link_knee_r_pitch"];
+"Link_r_ankle_pitch" [label="Link_r_ankle_pitch"];
+"Link_r_ankle_roll" [label="Link_r_ankle_roll"];
+"Link_arm_l_01" [label="Link_arm_l_01"];
+"Link_arm_l_02" [label="Link_arm_l_02"];
+"Link_arm_l_03" [label="Link_arm_l_03"];
+"Link_arm_l_04" [label="Link_arm_l_04"];
+"Link_arm_l_05" [label="Link_arm_l_05"];
+"Link_arm_l_06" [label="Link_arm_l_06"];
+"Link_arm_l_07" [label="Link_arm_l_07"];
+"Link_arm_r_01" [label="Link_arm_r_01"];
+"Link_arm_r_02" [label="Link_arm_r_02"];
+"Link_arm_r_03" [label="Link_arm_r_03"];
+"Link_arm_r_04" [label="Link_arm_r_04"];
+"Link_arm_r_05" [label="Link_arm_r_05"];
+"Link_arm_r_06" [label="Link_arm_r_06"];
+"Link_arm_r_07" [label="Link_arm_r_07"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "J_head_yaw" [label="xyz: 0.009 0 0.4064 \nrpy: 0 -0 0"]
+"J_head_yaw" -> "Link_head_yaw"
+"Link_head_yaw" -> "J_head_pitch" [label="xyz: 0 -0.0346 0.0485 \nrpy: 0 -0 0"]
+"J_head_pitch" -> "Link_head_pitch"
+"base_link" -> "J_waist_pitch" [label="xyz: 0 -0.06525 0 \nrpy: 0 -0 0"]
+"J_waist_pitch" -> "Link_waist_pitch"
+"Link_waist_pitch" -> "J_waist_roll" [label="xyz: -0.064 0.0655 0 \nrpy: 0 -0 0"]
+"J_waist_roll" -> "Link_waist_roll"
+"Link_waist_roll" -> "J_waist_yaw" [label="xyz: 0.0675 0 -0.098 \nrpy: 0 -0 0"]
+"J_waist_yaw" -> "Link_waist_yaw"
+"Link_waist_yaw" -> "l_hip_roll" [label="xyz: -0.0875 0.12 -0.069 \nrpy: 0 -0 0"]
+"l_hip_roll" -> "Link_hip_l_roll"
+"Link_hip_l_roll" -> "l_hip_yaw" [label="xyz: 0.08225 -0.001 -0.01 \nrpy: 0 -0 0"]
+"l_hip_yaw" -> "Link_hip_l_yaw"
+"Link_hip_l_yaw" -> "l_hip_pitch" [label="xyz: 0 -0.03675 -0.1055 \nrpy: 0 -0.4 0"]
+"l_hip_pitch" -> "Link_hip_l_pitch"
+"Link_hip_l_pitch" -> "l_knee_pitch" [label="xyz: 0 0.01125 -0.4 \nrpy: 0 0.8 0"]
+"l_knee_pitch" -> "Link_knee_l_pitch"
+"Link_knee_l_pitch" -> "l_ankle_pitch" [label="xyz: 0 0 -0.387 \nrpy: 0 -0.4 0"]
+"l_ankle_pitch" -> "Link_l_ankle_pitch"
+"Link_l_ankle_pitch" -> "l_ankle_roll" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"l_ankle_roll" -> "Link_l_ankle_roll"
+"Link_waist_yaw" -> "r_hip_roll" [label="xyz: -0.0875 -0.12 -0.069 \nrpy: 0 -0 0"]
+"r_hip_roll" -> "Link_hip_r_roll"
+"Link_hip_r_roll" -> "r_hip_yaw" [label="xyz: 0.08225 -0.001 -0.01 \nrpy: 0 -0 0"]
+"r_hip_yaw" -> "Link_hip_r_yaw"
+"Link_hip_r_yaw" -> "r_hip_pitch" [label="xyz: 0 0.03675 -0.1055 \nrpy: 0 -0.4 0"]
+"r_hip_pitch" -> "Link_hip_r_pitch"
+"Link_hip_r_pitch" -> "r_knee_pitch" [label="xyz: 0 -0.01125 -0.4 \nrpy: 0 0.8 0"]
+"r_knee_pitch" -> "Link_knee_r_pitch"
+"Link_knee_r_pitch" -> "r_ankle_pitch" [label="xyz: 0 0 -0.387 \nrpy: 0 -0.4 0"]
+"r_ankle_pitch" -> "Link_r_ankle_pitch"
+"Link_r_ankle_pitch" -> "r_ankle_roll" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"r_ankle_roll" -> "Link_r_ankle_roll"
+"base_link" -> "l_arm_01" [label="xyz: 0.004 0.1616 0.3922 \nrpy: 3.14159 0.00159265 3.14159"]
+"l_arm_01" -> "Link_arm_l_01"
+"Link_arm_l_01" -> "l_arm_02" [label="xyz: 0.042 0.041 0 \nrpy: 1.3 -0 0"]
+"l_arm_02" -> "Link_arm_l_02"
+"Link_arm_l_02" -> "l_arm_03" [label="xyz: -0.042 0.1226 0 \nrpy: 0 -0 0"]
+"l_arm_03" -> "Link_arm_l_03"
+"Link_arm_l_03" -> "l_arm_04" [label="xyz: -0.0353 0.1774 0.024 \nrpy: 0 -0 0"]
+"l_arm_04" -> "Link_arm_l_04"
+"Link_arm_l_04" -> "l_arm_05" [label="xyz: 0.0353 0.1035 -0.024 \nrpy: 0 -0 0"]
+"l_arm_05" -> "Link_arm_l_05"
+"Link_arm_l_05" -> "l_arm_06" [label="xyz: 0.0265 0.1965 0 \nrpy: 0 -0 0"]
+"l_arm_06" -> "Link_arm_l_06"
+"Link_arm_l_06" -> "l_arm_07" [label="xyz: -0.0265 0 0.0318 \nrpy: 0 -0 0"]
+"l_arm_07" -> "Link_arm_l_07"
+"base_link" -> "r_arm_01" [label="xyz: 0.004 -0.1616 0.3922 \nrpy: 3.14159 0.00159265 3.14159"]
+"r_arm_01" -> "Link_arm_r_01"
+"Link_arm_r_01" -> "r_arm_02" [label="xyz: -0.042 -0.041 0 \nrpy: -1.3 0 0"]
+"r_arm_02" -> "Link_arm_r_02"
+"Link_arm_r_02" -> "r_arm_03" [label="xyz: 0.042 -0.1226 0 \nrpy: 0 -0 0"]
+"r_arm_03" -> "Link_arm_r_03"
+"Link_arm_r_03" -> "r_arm_04" [label="xyz: 0.0353 -0.1774 0.024 \nrpy: 0 -0 0"]
+"r_arm_04" -> "Link_arm_r_04"
+"Link_arm_r_04" -> "r_arm_05" [label="xyz: -0.0353 -0.1035 -0.024 \nrpy: 0 -0 0"]
+"r_arm_05" -> "Link_arm_r_05"
+"Link_arm_r_05" -> "r_arm_06" [label="xyz: -0.0265 -0.1965 0 \nrpy: 0 -0 0"]
+"r_arm_06" -> "Link_arm_r_06"
+"Link_arm_r_06" -> "r_arm_07" [label="xyz: 0.0265 0 0.0318 \nrpy: 0 -0 0"]
+"r_arm_07" -> "Link_arm_r_07"
+}

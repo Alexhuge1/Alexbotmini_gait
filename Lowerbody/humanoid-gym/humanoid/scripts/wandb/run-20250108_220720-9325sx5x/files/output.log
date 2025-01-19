@@ -1,0 +1,102 @@
+[34m[1mwandb[0m: [33mWARNING[0m Found log directory outside of given root_logdir, dropping given root_logdir for event file in /home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/logs/alexbotmini/Jan08_22-07-18_
+################################################################################
+                      [1m Learning iteration 0/3000 [0m
+
+                       Computation: 19877 steps/s (collection: 2.979s, learning 0.039s)
+               Value function loss: 386.0818
+                    Surrogate loss: -0.0014
+             Mean action noise std: 1.00
+                       Mean reward: 0.07
+               Mean episode length: 42.15
+Mean episode rew_action_smoothness: -0.0005
+         Mean episode rew_base_acc: 0.0000
+      Mean episode rew_base_height: 0.0003
+        Mean episode rew_collision: -0.0002
+Mean episode rew_default_joint_pos: 0.0004
+          Mean episode rew_dof_acc: -0.0235
+          Mean episode rew_dof_vel: -0.0069
+    Mean episode rew_feet_air_time: 0.0001
+   Mean episode rew_feet_clearance: 0.0007
+Mean episode rew_feet_contact_forces: -0.0051
+Mean episode rew_feet_contact_number: 0.0103
+    Mean episode rew_feet_distance: 0.0025
+        Mean episode rew_foot_slip: -0.0029
+        Mean episode rew_joint_pos: 0.0084
+    Mean episode rew_knee_distance: 0.0013
+        Mean episode rew_low_speed: -0.0020
+      Mean episode rew_orientation: 0.0022
+          Mean episode rew_torques: -0.0002
+   Mean episode rew_track_vel_hard: -0.0065
+ Mean episode rew_tracking_ang_vel: 0.0014
+ Mean episode rew_tracking_lin_vel: 0.0047
+ Mean episode rew_vel_mismatch_exp: 0.0012
+        Mean episode terrain_level: 9.3250
+--------------------------------------------------------------------------------
+                   Total timesteps: 60000
+                    Iteration time: 3.02s
+                        Total time: 3.02s
+                               ETA: 9055.3s
+
+################################################################################
+                      [1m Learning iteration 1/3000 [0m
+
+                       Computation: 27340 steps/s (collection: 2.158s, learning 0.037s)
+               Value function loss: inf
+                    Surrogate loss: 0.0000
+             Mean action noise std: 1.00
+                       Mean reward: 1.47
+               Mean episode length: 104.85
+Mean episode rew_action_smoothness: -0.0016
+         Mean episode rew_base_acc: 0.0001
+      Mean episode rew_base_height: 0.0008
+        Mean episode rew_collision: -0.0004
+Mean episode rew_default_joint_pos: 0.0008
+          Mean episode rew_dof_acc: -0.0104
+          Mean episode rew_dof_vel: -0.0044
+    Mean episode rew_feet_air_time: 0.0002
+   Mean episode rew_feet_clearance: 0.0029
+Mean episode rew_feet_contact_forces: -0.0044
+Mean episode rew_feet_contact_number: 0.0330
+    Mean episode rew_feet_distance: 0.0071
+        Mean episode rew_foot_slip: -0.0101
+        Mean episode rew_joint_pos: 0.0219
+    Mean episode rew_knee_distance: 0.0039
+        Mean episode rew_low_speed: -0.0042
+      Mean episode rew_orientation: 0.0042
+          Mean episode rew_torques: -0.0005
+   Mean episode rew_track_vel_hard: -0.0120
+ Mean episode rew_tracking_ang_vel: 0.0046
+ Mean episode rew_tracking_lin_vel: 0.0119
+ Mean episode rew_vel_mismatch_exp: 0.0049
+        Mean episode terrain_level: 9.3250
+--------------------------------------------------------------------------------
+                   Total timesteps: 120000
+                    Iteration time: 2.19s
+                        Total time: 5.21s
+                               ETA: 7816.9s
+Traceback (most recent call last):
+  File "train.py", line 43, in <module>
+    train(args)
+  File "train.py", line 39, in train
+    ppo_runner.learn(num_learning_iterations=train_cfg.runner.max_iterations, init_at_random_ep_len=True)
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/algo/ppo/on_policy_runner.py", line 129, in learn
+    actions = self.alg.act(obs, critic_obs)
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/algo/ppo/ppo.py", line 93, in act
+    self.transition.actions = self.actor_critic.act(obs).detach()
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/algo/ppo/actor_critic.py", line 117, in act
+    self.update_distribution(observations)
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/algo/ppo/actor_critic.py", line 114, in update_distribution
+    self.distribution = Normal(mean, mean*0. + self.std)
+  File "/home/alexhuge/anaconda3/envs/alexbotmini/lib/python3.8/site-packages/torch/distributions/normal.py", line 56, in __init__
+    super(Normal, self).__init__(batch_shape, validate_args=validate_args)
+  File "/home/alexhuge/anaconda3/envs/alexbotmini/lib/python3.8/site-packages/torch/distributions/distribution.py", line 56, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (1000, 12)) of distribution Normal(loc: torch.Size([1000, 12]), scale: torch.Size([1000, 12])) to satisfy the constraint Real(), but found invalid values:
+tensor([[ 0.0978, -0.0218,  0.1478,  ..., -0.3094,  0.0341,  0.0513],
+        [ 0.6547, -0.3080, -0.9991,  ...,  0.8815, -0.1725, -0.8208],
+        [ 0.4086,  0.1928, -0.1655,  ...,  0.1812, -0.2780, -0.0518],
+        ...,
+        [ 0.1654,  0.0454,  0.0312,  ...,  0.1065, -0.0079, -0.0520],
+        [ 0.0727,  0.0358,  0.0974,  ...,  0.0202,  0.0136, -0.0388],
+        [ 0.0369,  0.1839,  0.2296,  ..., -0.2451,  0.0218,  0.1803]],
+       device='cuda:0')

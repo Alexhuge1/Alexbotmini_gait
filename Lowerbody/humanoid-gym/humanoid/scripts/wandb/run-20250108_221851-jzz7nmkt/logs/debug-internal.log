@@ -1,0 +1,18 @@
+{"time":"2025-01-08T22:18:51.199021609+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-08T22:18:51.199027062+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/scripts/wandb/run-20250108_221851-jzz7nmkt/logs/debug-core.log"}
+{"time":"2025-01-08T22:18:51.303284596+08:00","level":"INFO","msg":"created new stream","id":"jzz7nmkt"}
+{"time":"2025-01-08T22:18:51.303376326+08:00","level":"INFO","msg":"stream: started","id":"jzz7nmkt"}
+{"time":"2025-01-08T22:18:51.303406644+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"jzz7nmkt"}
+{"time":"2025-01-08T22:18:51.303474024+08:00","level":"INFO","msg":"sender: started","stream_id":"jzz7nmkt"}
+{"time":"2025-01-08T22:18:51.303612019+08:00","level":"INFO","msg":"handler: started","stream_id":"jzz7nmkt"}
+{"time":"2025-01-08T22:18:52.254076039+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-08T22:19:02.343193749+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-08T22:19:02.343493591+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/logs/alexbotmini/Jan08_22-18-49_/events.out.tfevents.1736345932.alexbotmini4090d.19755.0"}
+{"time":"2025-01-08T22:19:41.900640043+08:00","level":"INFO","msg":"stream: closing","id":"jzz7nmkt"}
+{"time":"2025-01-08T22:19:41.900657967+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-08T22:19:41.901045435+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-08T22:19:43.782237707+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-08T22:19:44.870277425+08:00","level":"INFO","msg":"handler: closed","stream_id":"jzz7nmkt"}
+{"time":"2025-01-08T22:19:44.870375202+08:00","level":"INFO","msg":"sender: closed","stream_id":"jzz7nmkt"}
+{"time":"2025-01-08T22:19:44.870365794+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jzz7nmkt"}
+{"time":"2025-01-08T22:19:44.870555895+08:00","level":"INFO","msg":"stream: closed","id":"jzz7nmkt"}

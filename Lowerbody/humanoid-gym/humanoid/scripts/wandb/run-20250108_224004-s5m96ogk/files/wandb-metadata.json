@@ -1,0 +1,41 @@
+{
+  "os":  "Linux-5.15.0-127-generic-x86_64-with-glibc2.17",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-01-08T14:40:04.951572Z",
+  "args":  [
+    "--task=alexbotmini"
+  ],
+  "program":  "train.py",
+  "codePath":  "train.py",
+  "email":  "2200958879@qq.com",
+  "root":  "/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/scripts",
+  "host":  "alexbotmini4090d",
+  "executable":  "/home/alexhuge/anaconda3/envs/alexbotmini/bin/python",
+  "codePathLocal":  "train.py",
+  "cpu_count":  16,
+  "cpu_count_logical":  24,
+  "gpu":  "NVIDIA GeForce RTX 4090 D",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "135084904448",
+      "used":  "24392867840"
+    }
+  },
+  "memory":  {
+    "total":  "33449852928"
+  },
+  "cpu":  {
+    "count":  16,
+    "countLogical":  24
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4090 D",
+      "memoryTotal":  "25757220864",
+      "cudaCores":  14592,
+      "architecture":  "Ada"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}

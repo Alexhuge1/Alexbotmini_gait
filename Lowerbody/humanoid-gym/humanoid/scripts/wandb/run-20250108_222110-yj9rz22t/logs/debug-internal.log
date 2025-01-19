@@ -1,0 +1,18 @@
+{"time":"2025-01-08T22:21:10.559184501+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-08T22:21:10.559196314+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/scripts/wandb/run-20250108_222110-yj9rz22t/logs/debug-core.log"}
+{"time":"2025-01-08T22:21:10.661917947+08:00","level":"INFO","msg":"created new stream","id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:10.661957332+08:00","level":"INFO","msg":"stream: started","id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:10.661983877+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:10.662076908+08:00","level":"INFO","msg":"handler: started","stream_id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:10.662159302+08:00","level":"INFO","msg":"sender: started","stream_id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:11.926525352+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-08T22:21:22.026983748+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-08T22:21:22.038343253+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_lowerbody_gait/humanoid-gym/logs/alexbotmini/Jan08_22-21-08_/events.out.tfevents.1736346071.alexbotmini4090d.20836.0"}
+{"time":"2025-01-08T22:21:25.222365123+08:00","level":"INFO","msg":"stream: closing","id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:25.22238714+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-08T22:21:25.222754942+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-08T22:21:26.467592654+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-08T22:21:27.246651445+08:00","level":"INFO","msg":"handler: closed","stream_id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:27.246728955+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:27.246740281+08:00","level":"INFO","msg":"sender: closed","stream_id":"yj9rz22t"}
+{"time":"2025-01-08T22:21:27.246826691+08:00","level":"INFO","msg":"stream: closed","id":"yj9rz22t"}

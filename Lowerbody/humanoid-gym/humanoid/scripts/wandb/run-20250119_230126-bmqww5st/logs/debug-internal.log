@@ -1,0 +1,19 @@
+{"time":"2025-01-19T23:01:26.604856484+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-19T23:01:26.604866531+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250119_230126-bmqww5st/logs/debug-core.log"}
+{"time":"2025-01-19T23:01:26.712233046+08:00","level":"INFO","msg":"created new stream","id":"bmqww5st"}
+{"time":"2025-01-19T23:01:26.712258209+08:00","level":"INFO","msg":"stream: started","id":"bmqww5st"}
+{"time":"2025-01-19T23:01:26.712268576+08:00","level":"INFO","msg":"handler: started","stream_id":"bmqww5st"}
+{"time":"2025-01-19T23:01:26.712312557+08:00","level":"INFO","msg":"sender: started","stream_id":"bmqww5st"}
+{"time":"2025-01-19T23:01:26.712327816+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"bmqww5st"}
+{"time":"2025-01-19T23:01:28.158134937+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-19T23:01:34.227899462+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/bmqww5st/file_stream\": EOF"}
+{"time":"2025-01-19T23:01:38.311324144+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-19T23:01:38.32573348+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan19_23-01-21_/events.out.tfevents.1737298888.alexbotmini4090d.100962.0"}
+{"time":"2025-01-19T23:02:41.654180244+08:00","level":"INFO","msg":"stream: closing","id":"bmqww5st"}
+{"time":"2025-01-19T23:02:41.654203042+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-19T23:02:41.654849196+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-19T23:02:43.37067985+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-19T23:02:44.552376439+08:00","level":"INFO","msg":"handler: closed","stream_id":"bmqww5st"}
+{"time":"2025-01-19T23:02:44.552418692+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bmqww5st"}
+{"time":"2025-01-19T23:02:44.552459552+08:00","level":"INFO","msg":"sender: closed","stream_id":"bmqww5st"}
+{"time":"2025-01-19T23:02:44.552464698+08:00","level":"INFO","msg":"stream: closed","id":"bmqww5st"}

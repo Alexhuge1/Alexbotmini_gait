@@ -199,7 +199,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             low_speed = 0.2
             track_vel_hard = 0.5
             # base pos
-            default_joint_pos = 0.35
+            default_joint_pos = 0.65
             orientation = 1.
             base_height = 0.2
             base_acc = 0.2

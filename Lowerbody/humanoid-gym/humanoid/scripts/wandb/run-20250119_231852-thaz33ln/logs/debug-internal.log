@@ -48,3 +48,11 @@
 {"time":"2025-01-19T23:48:00.203597845+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/thaz33ln/file_stream\": EOF"}
 {"time":"2025-01-19T23:48:11.821408545+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/thaz33ln/file_stream\": EOF"}
 {"time":"2025-01-19T23:48:26.830893279+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/thaz33ln/file_stream\": EOF"}
+{"time":"2025-01-20T00:05:14.661699801+08:00","level":"INFO","msg":"stream: closing","id":"thaz33ln"}
+{"time":"2025-01-20T00:05:14.661720101+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-20T00:05:14.662095636+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-20T00:05:28.168123369+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-20T00:05:29.776565591+08:00","level":"INFO","msg":"handler: closed","stream_id":"thaz33ln"}
+{"time":"2025-01-20T00:05:29.776598243+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"thaz33ln"}
+{"time":"2025-01-20T00:05:29.7766155+08:00","level":"INFO","msg":"sender: closed","stream_id":"thaz33ln"}
+{"time":"2025-01-20T00:05:29.776631848+08:00","level":"INFO","msg":"stream: closed","id":"thaz33ln"}

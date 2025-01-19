@@ -21,3 +21,4 @@ config: {'algorithm': {'clip_param': 0.2, 'desired_kl': 0.01, 'entropy_coef': 0.
 2025-01-19 23:18:54,353 INFO    MainThread:111489 [wandb_run.py:_redirect():2314] Redirects installed.
 2025-01-19 23:18:54,355 INFO    MainThread:111489 [wandb_init.py:init():916] run started, returning control to user process
 2025-01-19 23:18:54,355 INFO    MainThread:111489 [wandb_run.py:_tensorboard_callback():1436] tensorboard callback: /home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan19_23-18-47_, True
+2025-01-20 00:05:14,661 WARNING MsgRouterThr:111489 [router.py:message_loop():75] message_loop has been closed

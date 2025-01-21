@@ -98,7 +98,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             height_measurements = 0.1
 
     class init_state(LeggedRobotCfg.init_state):
-        pos = [0.0, 0.0, 0.70]
+        pos = [0.0, 0.0, 0.72]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
             'leftjoint1': -0.2,
@@ -167,7 +167,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             heading = [-3.14, 3.14]
 
     class rewards:
-        base_height_target = 0.65
+        base_height_target = 0.66
         min_dist = 0.2
         max_dist = 0.5
         # put some settings here for LLM parameter tuning
@@ -193,13 +193,13 @@ class alexbotminiCfg(LeggedRobotCfg):
             # contact
             feet_contact_forces = -0.01
             # vel tracking
-            tracking_lin_vel = 1.4
+            tracking_lin_vel = 2.5
             tracking_ang_vel = 1.1
             vel_mismatch_exp = 0.5  # lin_z; ang x,y
             low_speed = 0.2
             track_vel_hard = 0.5
             # base pos
-            default_joint_pos = 0.65
+            default_joint_pos = 0.5
             orientation = 1.
             base_height = 0.2
             base_acc = 0.2
@@ -243,7 +243,7 @@ class alexbotminiCfgPPO(LeggedRobotCfgPPO):
         policy_class_name = 'ActorCritic'
         algorithm_class_name = 'PPO'
         num_steps_per_env = 60  # per iteration
-        max_iterations = 2000  # number of policy updates
+        max_iterations = 6000  # number of policy updates
 
         # logging
         save_interval = 100  # Please check for potential savings every `save_interval` iterations.

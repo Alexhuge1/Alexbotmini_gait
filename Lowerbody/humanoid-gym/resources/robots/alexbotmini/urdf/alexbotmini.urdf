@@ -620,7 +620,6 @@
           rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
-    
   </link>
   <joint
     name="leftjoint5"

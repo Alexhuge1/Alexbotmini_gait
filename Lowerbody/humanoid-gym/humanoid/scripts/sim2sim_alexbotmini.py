@@ -40,7 +40,7 @@ import torch
 
 
 class cmd:
-    vx = 0.4
+    vx = 0.5
     vy = 0.0
     dyaw = 0.0
 
@@ -95,6 +95,7 @@ def run_mujoco(policy, cfg):
     Returns:
         None
     """
+    
     model = mujoco.MjModel.from_xml_path(cfg.sim_config.mujoco_model_path)
     model.opt.timestep = cfg.sim_config.dt
     data = mujoco.MjData(model)
@@ -109,6 +110,21 @@ def run_mujoco(policy, cfg):
         hist_obs.append(np.zeros([1, cfg.env.num_single_obs], dtype=np.double))
 
     count_lowlevel = 0
+
+    default_angle = np.zeros((cfg.env.num_actions),dtype=np.double)
+
+    default_angle[0] = cfg.init_state.default_joint_angles['rightjoint1']
+    default_angle[1] = cfg.init_state.default_joint_angles['rightjoint2']
+    default_angle[2] = cfg.init_state.default_joint_angles['rightjoint3']
+    default_angle[3] = cfg.init_state.default_joint_angles['rightjoint4']
+    default_angle[4] = cfg.init_state.default_joint_angles['rightjoint5']
+    default_angle[5] = cfg.init_state.default_joint_angles['rightjoint6']
+    default_angle[6] = cfg.init_state.default_joint_angles['leftjoint1']
+    default_angle[7] = cfg.init_state.default_joint_angles['leftjoint2']
+    default_angle[8] = cfg.init_state.default_joint_angles['leftjoint3']
+    default_angle[9] = cfg.init_state.default_joint_angles['leftjoint4']
+    default_angle[10] = cfg.init_state.default_joint_angles['leftjoint5']
+    default_angle[11] = cfg.init_state.default_joint_angles['leftjoint6']
 
 
     for _ in tqdm(range(int(cfg.sim_config.sim_duration / cfg.sim_config.dt)), desc="Simulating..."):
@@ -130,7 +146,7 @@ def run_mujoco(policy, cfg):
             obs[0, 2] = cmd.vx * cfg.normalization.obs_scales.lin_vel
             obs[0, 3] = cmd.vy * cfg.normalization.obs_scales.lin_vel
             obs[0, 4] = cmd.dyaw * cfg.normalization.obs_scales.ang_vel
-            obs[0, 5:17] = q * cfg.normalization.obs_scales.dof_pos
+            obs[0, 5:17] = (q -default_angle)* cfg.normalization.obs_scales.dof_pos
             obs[0, 17:29] = dq * cfg.normalization.obs_scales.dof_vel
             obs[0, 29:41] = action
             obs[0, 41:44] = omega
@@ -147,7 +163,7 @@ def run_mujoco(policy, cfg):
             action[:] = policy(torch.tensor(policy_input))[0].detach().numpy()
             action = np.clip(action, -cfg.normalization.clip_actions, cfg.normalization.clip_actions)
 
-            target_q = action * cfg.control.action_scale
+            target_q = action * cfg.control.action_scale+default_angle
 
 
         target_dq = np.zeros((cfg.env.num_actions), dtype=np.double)
@@ -177,16 +193,18 @@ if __name__ == '__main__':
 
         class sim_config:
             if args.terrain:
-                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini.xml'
+                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini/alexbotmini.xml'
+
                 
             else:
-                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/scene.xml'
+                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini/scene.xml'
             sim_duration = 60.0
             dt = 0.001
             decimation = 10
 
         class robot_config:
             kps = np.array([120, 80, 80, 120, 15, 15, 120, 80, 80, 120, 15, 15], dtype=np.double)
+
             kds = np.array([3, 2, 2, 3, 0.3, 0.3, 3, 2, 2, 3, 0.3, 0.3,], dtype=np.double)
             tau_limit = 200. * np.ones(12, dtype=np.double)
 

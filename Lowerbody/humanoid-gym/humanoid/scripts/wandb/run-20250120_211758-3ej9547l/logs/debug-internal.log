@@ -1,0 +1,22 @@
+{"time":"2025-01-20T21:17:58.058264159+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-20T21:17:58.058271411+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250120_211758-3ej9547l/logs/debug-core.log"}
+{"time":"2025-01-20T21:17:58.159921666+08:00","level":"INFO","msg":"created new stream","id":"3ej9547l"}
+{"time":"2025-01-20T21:17:58.159951085+08:00","level":"INFO","msg":"stream: started","id":"3ej9547l"}
+{"time":"2025-01-20T21:17:58.159958501+08:00","level":"INFO","msg":"handler: started","stream_id":"3ej9547l"}
+{"time":"2025-01-20T21:17:58.159977662+08:00","level":"INFO","msg":"sender: started","stream_id":"3ej9547l"}
+{"time":"2025-01-20T21:17:58.159978695+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"3ej9547l"}
+{"time":"2025-01-20T21:17:58.658211063+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-20T21:18:08.778019538+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-20T21:18:08.778544604+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan20_21-17-56_/events.out.tfevents.1737379078.alexbotmini4090d.132816.0"}
+{"time":"2025-01-20T21:21:39.462437608+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/3ej9547l/file_stream\": EOF"}
+{"time":"2025-01-20T21:31:39.4745896+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/3ej9547l/file_stream\": EOF"}
+{"time":"2025-01-20T21:45:39.445487084+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/3ej9547l/file_stream\": EOF"}
+{"time":"2025-01-20T21:48:39.468171535+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/3ej9547l/file_stream\": EOF"}
+{"time":"2025-01-20T21:51:43.825041997+08:00","level":"INFO","msg":"stream: closing","id":"3ej9547l"}
+{"time":"2025-01-20T21:51:43.825062525+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-20T21:51:43.825439254+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-20T21:51:45.923843215+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-20T21:51:46.232499343+08:00","level":"INFO","msg":"handler: closed","stream_id":"3ej9547l"}
+{"time":"2025-01-20T21:51:46.23254625+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"3ej9547l"}
+{"time":"2025-01-20T21:51:46.232576625+08:00","level":"INFO","msg":"sender: closed","stream_id":"3ej9547l"}
+{"time":"2025-01-20T21:51:46.232617693+08:00","level":"INFO","msg":"stream: closed","id":"3ej9547l"}

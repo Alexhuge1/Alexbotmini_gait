@@ -101,17 +101,17 @@ class alexbotminiCfg(LeggedRobotCfg):
         pos = [0.0, 0.0, 0.72]
 
         default_joint_angles = {  # = target angles [rad] when action = 0.0
-            'leftjoint1': -0.2,
+            'leftjoint1': -0.174,
             'leftjoint2': 0.,
             'leftjoint3': 0.,
-            'leftjoint4': 0.6,
-            'leftjoint5': -0.4,
+            'leftjoint4': 0.314,
+            'leftjoint5': -0.14,
             'leftjoint6': 0.,
-            'rightjoint1': 0.2,
+            'rightjoint1': 0.174,
             'rightjoint2': 0.,
             'rightjoint3': 0.,
-            'rightjoint4': -0.6,
-            'rightjoint5': 0.4,
+            'rightjoint4': -0.314,
+            'rightjoint5': 0.14,
             'rightjoint6': 0.,
         }
 
@@ -145,7 +145,7 @@ class alexbotminiCfg(LeggedRobotCfg):
 
     class domain_rand:
         randomize_friction = True
-        friction_range = [0.1, 2.0]
+        friction_range = [0.1, 1.0]
         randomize_base_mass = True
         added_mass_range = [-2., 2.]
         push_robots = True

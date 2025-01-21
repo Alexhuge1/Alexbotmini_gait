@@ -113,18 +113,19 @@ def run_mujoco(policy, cfg):
 
     default_angle = np.zeros((cfg.env.num_actions),dtype=np.double)
 
-    default_angle[0] = cfg.init_state.default_joint_angles['rightjoint1']
-    default_angle[1] = cfg.init_state.default_joint_angles['rightjoint2']
-    default_angle[2] = cfg.init_state.default_joint_angles['rightjoint3']
-    default_angle[3] = cfg.init_state.default_joint_angles['rightjoint4']
-    default_angle[4] = cfg.init_state.default_joint_angles['rightjoint5']
-    default_angle[5] = cfg.init_state.default_joint_angles['rightjoint6']
-    default_angle[6] = cfg.init_state.default_joint_angles['leftjoint1']
-    default_angle[7] = cfg.init_state.default_joint_angles['leftjoint2']
-    default_angle[8] = cfg.init_state.default_joint_angles['leftjoint3']
-    default_angle[9] = cfg.init_state.default_joint_angles['leftjoint4']
-    default_angle[10] = cfg.init_state.default_joint_angles['leftjoint5']
-    default_angle[11] = cfg.init_state.default_joint_angles['leftjoint6']
+    default_angle[0] = -cfg.init_state.default_joint_angles['leftjoint1']
+    default_angle[1] = cfg.init_state.default_joint_angles['leftjoint2']
+    default_angle[2] = cfg.init_state.default_joint_angles['leftjoint3']
+    default_angle[3] = -cfg.init_state.default_joint_angles['leftjoint4']
+    default_angle[4] = cfg.init_state.default_joint_angles['leftjoint5']
+    default_angle[5] = cfg.init_state.default_joint_angles['leftjoint6']
+    default_angle[6] = -cfg.init_state.default_joint_angles['rightjoint1']
+    default_angle[7] = cfg.init_state.default_joint_angles['rightjoint2']
+    default_angle[8] = cfg.init_state.default_joint_angles['rightjoint3']
+    default_angle[9] = -cfg.init_state.default_joint_angles['rightjoint4']
+    default_angle[10] = cfg.init_state.default_joint_angles['rightjoint5']
+    default_angle[11] = cfg.init_state.default_joint_angles['rightjoint6']
+
 
 
     for _ in tqdm(range(int(cfg.sim_config.sim_duration / cfg.sim_config.dt)), desc="Simulating..."):
@@ -153,6 +154,7 @@ def run_mujoco(policy, cfg):
             obs[0, 44:47] = eu_ang
 
             obs = np.clip(obs, -cfg.normalization.clip_observations, cfg.normalization.clip_observations)
+            # obs = np.clip(obs, 0, 0)
 
             hist_obs.append(obs)
             hist_obs.popleft()
@@ -162,8 +164,10 @@ def run_mujoco(policy, cfg):
                 policy_input[0, i * cfg.env.num_single_obs : (i + 1) * cfg.env.num_single_obs] = hist_obs[i][0, :]
             action[:] = policy(torch.tensor(policy_input))[0].detach().numpy()
             action = np.clip(action, -cfg.normalization.clip_actions, cfg.normalization.clip_actions)
+            # action = np.clip(action, 0, 0)
 
             target_q = action * cfg.control.action_scale+default_angle
+            print('target q',target_q*180/3.14)
 
 
         target_dq = np.zeros((cfg.env.num_actions), dtype=np.double)

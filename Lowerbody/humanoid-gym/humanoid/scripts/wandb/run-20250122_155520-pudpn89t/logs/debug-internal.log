@@ -1,0 +1,18 @@
+{"time":"2025-01-22T15:55:20.722531564+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-22T15:55:20.722539139+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250122_155520-pudpn89t/logs/debug-core.log"}
+{"time":"2025-01-22T15:55:20.825978308+08:00","level":"INFO","msg":"created new stream","id":"pudpn89t"}
+{"time":"2025-01-22T15:55:20.826076739+08:00","level":"INFO","msg":"stream: started","id":"pudpn89t"}
+{"time":"2025-01-22T15:55:20.8260845+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"pudpn89t"}
+{"time":"2025-01-22T15:55:20.826116377+08:00","level":"INFO","msg":"handler: started","stream_id":"pudpn89t"}
+{"time":"2025-01-22T15:55:20.82608034+08:00","level":"INFO","msg":"sender: started","stream_id":"pudpn89t"}
+{"time":"2025-01-22T15:55:21.364230075+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-22T15:55:31.48346783+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-22T15:55:31.483677127+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan22_15-55-19_/events.out.tfevents.1737532521.alexbotmini4090d.2369327.0"}
+{"time":"2025-01-22T15:56:00.64954414+08:00","level":"INFO","msg":"stream: closing","id":"pudpn89t"}
+{"time":"2025-01-22T15:56:00.649588779+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-22T15:56:00.650615107+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-22T15:56:01.814645078+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-22T15:56:09.488391381+08:00","level":"INFO","msg":"handler: closed","stream_id":"pudpn89t"}
+{"time":"2025-01-22T15:56:09.488463483+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"pudpn89t"}
+{"time":"2025-01-22T15:56:09.488482235+08:00","level":"INFO","msg":"sender: closed","stream_id":"pudpn89t"}
+{"time":"2025-01-22T15:56:09.488637761+08:00","level":"INFO","msg":"stream: closed","id":"pudpn89t"}

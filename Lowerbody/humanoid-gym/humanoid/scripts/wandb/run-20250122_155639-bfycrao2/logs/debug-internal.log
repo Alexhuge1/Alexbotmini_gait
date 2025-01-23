@@ -1,0 +1,18 @@
+{"time":"2025-01-22T15:56:39.342917221+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-22T15:56:39.34292469+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250122_155639-bfycrao2/logs/debug-core.log"}
+{"time":"2025-01-22T15:56:39.445600022+08:00","level":"INFO","msg":"created new stream","id":"bfycrao2"}
+{"time":"2025-01-22T15:56:39.445653998+08:00","level":"INFO","msg":"stream: started","id":"bfycrao2"}
+{"time":"2025-01-22T15:56:39.445705888+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"bfycrao2"}
+{"time":"2025-01-22T15:56:39.445760878+08:00","level":"INFO","msg":"handler: started","stream_id":"bfycrao2"}
+{"time":"2025-01-22T15:56:39.445859606+08:00","level":"INFO","msg":"sender: started","stream_id":"bfycrao2"}
+{"time":"2025-01-22T15:56:40.028467739+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-22T15:56:50.159742284+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-22T15:56:50.159940279+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan22_15-56-38_/events.out.tfevents.1737532600.alexbotmini4090d.2369902.0"}
+{"time":"2025-01-22T15:57:23.011306155+08:00","level":"INFO","msg":"stream: closing","id":"bfycrao2"}
+{"time":"2025-01-22T15:57:23.011324354+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-22T15:57:23.011636181+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-22T15:57:24.547942165+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-22T15:57:25.120007342+08:00","level":"INFO","msg":"handler: closed","stream_id":"bfycrao2"}
+{"time":"2025-01-22T15:57:25.120034395+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"bfycrao2"}
+{"time":"2025-01-22T15:57:25.12006359+08:00","level":"INFO","msg":"sender: closed","stream_id":"bfycrao2"}
+{"time":"2025-01-22T15:57:25.120189847+08:00","level":"INFO","msg":"stream: closed","id":"bfycrao2"}

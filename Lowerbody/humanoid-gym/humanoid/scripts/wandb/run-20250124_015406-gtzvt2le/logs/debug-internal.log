@@ -1,0 +1,18 @@
+{"time":"2025-01-24T01:54:06.992903939+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-24T01:54:06.992911262+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250124_015406-gtzvt2le/logs/debug-core.log"}
+{"time":"2025-01-24T01:54:07.334815636+08:00","level":"INFO","msg":"created new stream","id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:07.334901492+08:00","level":"INFO","msg":"stream: started","id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:07.334926156+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:07.334943326+08:00","level":"INFO","msg":"handler: started","stream_id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:07.3349513+08:00","level":"INFO","msg":"sender: started","stream_id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:09.738397631+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-24T01:54:21.182472429+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-24T01:54:21.182905615+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan24_01-54-02_/events.out.tfevents.1737654851.alexbotmini4090d.38066.0"}
+{"time":"2025-01-24T01:54:49.923394941+08:00","level":"INFO","msg":"stream: closing","id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:49.923485028+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-24T01:54:49.924606433+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-24T01:54:51.511833513+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-24T01:54:52.13609155+08:00","level":"INFO","msg":"handler: closed","stream_id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:52.136161914+08:00","level":"INFO","msg":"sender: closed","stream_id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:52.136146059+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"gtzvt2le"}
+{"time":"2025-01-24T01:54:52.136265525+08:00","level":"INFO","msg":"stream: closed","id":"gtzvt2le"}

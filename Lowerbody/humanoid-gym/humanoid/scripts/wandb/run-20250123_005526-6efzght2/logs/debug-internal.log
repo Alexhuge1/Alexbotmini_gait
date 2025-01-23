@@ -1,0 +1,21 @@
+{"time":"2025-01-23T00:55:26.090826072+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-23T00:55:26.090833595+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250123_005526-6efzght2/logs/debug-core.log"}
+{"time":"2025-01-23T00:55:26.193581953+08:00","level":"INFO","msg":"created new stream","id":"6efzght2"}
+{"time":"2025-01-23T00:55:26.193640968+08:00","level":"INFO","msg":"stream: started","id":"6efzght2"}
+{"time":"2025-01-23T00:55:26.193672354+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"6efzght2"}
+{"time":"2025-01-23T00:55:26.193691836+08:00","level":"INFO","msg":"handler: started","stream_id":"6efzght2"}
+{"time":"2025-01-23T00:55:26.1937253+08:00","level":"INFO","msg":"sender: started","stream_id":"6efzght2"}
+{"time":"2025-01-23T00:55:27.234248709+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-23T00:55:37.393018358+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-23T00:55:37.393301072+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan23_00-55-25_/events.out.tfevents.1737564927.alexbotmini4090d.380079.0"}
+{"time":"2025-01-23T01:05:42.419668673+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-01-23T01:06:27.50665049+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-01-23T01:08:12.609803702+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-01-23T01:26:23.699470995+08:00","level":"INFO","msg":"stream: closing","id":"6efzght2"}
+{"time":"2025-01-23T01:26:23.699486863+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-23T01:26:23.699760531+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-23T01:26:26.439530438+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-23T01:26:27.085829698+08:00","level":"INFO","msg":"handler: closed","stream_id":"6efzght2"}
+{"time":"2025-01-23T01:26:27.085852165+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"6efzght2"}
+{"time":"2025-01-23T01:26:27.085877013+08:00","level":"INFO","msg":"sender: closed","stream_id":"6efzght2"}
+{"time":"2025-01-23T01:26:27.085880406+08:00","level":"INFO","msg":"stream: closed","id":"6efzght2"}

@@ -165,9 +165,11 @@ def run_mujoco(policy, cfg):
             action[:] = policy(torch.tensor(policy_input))[0].detach().numpy()
             action = np.clip(action, -cfg.normalization.clip_actions, cfg.normalization.clip_actions)
             # action = np.clip(action, 0, 0)
-
-            target_q = action * cfg.control.action_scale+default_angle
-            print('target q',target_q*180/3.14)
+            if count_lowlevel>800:
+                target_q = action * cfg.control.action_scale+default_angle
+                print('target q',target_q*180/3.14)
+            else:
+                target_q=default_angle
 
 
         target_dq = np.zeros((cfg.env.num_actions), dtype=np.double)
@@ -190,7 +192,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Deployment script.')
     parser.add_argument('--load_model', type=str, required=True,
                         help='Run to load from.')
-    parser.add_argument('--terrain', action='store_true', help='terrain or plane')
+    parser.add_argument('--terrain', action='store_true',default='plane', help='terrain or plane')
     args = parser.parse_args()
 
     class Sim2simCfg(alexbotminiCfg):

@@ -1,0 +1,23 @@
+{"time":"2025-01-24T02:42:02.181893646+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-24T02:42:02.181901052+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250124_024202-tdagte05/logs/debug-core.log"}
+{"time":"2025-01-24T02:42:02.284752258+08:00","level":"INFO","msg":"created new stream","id":"tdagte05"}
+{"time":"2025-01-24T02:42:02.284806499+08:00","level":"INFO","msg":"stream: started","id":"tdagte05"}
+{"time":"2025-01-24T02:42:02.284858784+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"tdagte05"}
+{"time":"2025-01-24T02:42:02.284865049+08:00","level":"INFO","msg":"sender: started","stream_id":"tdagte05"}
+{"time":"2025-01-24T02:42:02.284893627+08:00","level":"INFO","msg":"handler: started","stream_id":"tdagte05"}
+{"time":"2025-01-24T02:42:02.860611983+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-24T02:42:12.982341903+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-24T02:42:12.982708166+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan24_02-42-00_/events.out.tfevents.1737657722.alexbotmini4090d.46492.0"}
+{"time":"2025-01-24T05:46:48.602728139+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/tdagte05/file_stream\": EOF"}
+{"time":"2025-01-24T05:46:48.602734911+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": unexpected EOF"}
+{"time":"2025-01-24T05:46:55.69097444+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": EOF"}
+{"time":"2025-01-24T06:19:15.479060823+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/tdagte05/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-01-24T07:43:35.63947689+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/tdagte05/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-01-24T10:34:41.898593481+08:00","level":"INFO","msg":"stream: closing","id":"tdagte05"}
+{"time":"2025-01-24T10:34:41.898633267+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-24T10:34:41.899183923+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-24T10:34:44.27794516+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-24T10:34:44.602698234+08:00","level":"INFO","msg":"handler: closed","stream_id":"tdagte05"}
+{"time":"2025-01-24T10:34:44.602787931+08:00","level":"INFO","msg":"sender: closed","stream_id":"tdagte05"}
+{"time":"2025-01-24T10:34:44.60277507+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"tdagte05"}
+{"time":"2025-01-24T10:34:44.602931213+08:00","level":"INFO","msg":"stream: closed","id":"tdagte05"}

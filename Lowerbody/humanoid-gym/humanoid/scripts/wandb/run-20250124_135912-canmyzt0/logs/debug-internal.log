@@ -1,0 +1,11 @@
+{"time":"2025-01-24T13:59:12.701457728+08:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-24T13:59:12.701464784+08:00","level":"INFO","msg":"created symlink","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250124_135912-canmyzt0/logs/debug-core.log"}
+{"time":"2025-01-24T13:59:12.804119654+08:00","level":"INFO","msg":"created new stream","id":"canmyzt0"}
+{"time":"2025-01-24T13:59:12.804181955+08:00","level":"INFO","msg":"stream: started","id":"canmyzt0"}
+{"time":"2025-01-24T13:59:12.804205999+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"canmyzt0"}
+{"time":"2025-01-24T13:59:12.804244817+08:00","level":"INFO","msg":"sender: started","stream_id":"canmyzt0"}
+{"time":"2025-01-24T13:59:12.804213532+08:00","level":"INFO","msg":"handler: started","stream_id":"canmyzt0"}
+{"time":"2025-01-24T13:59:13.353025326+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-24T13:59:23.466573012+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-01-24T13:59:23.466908409+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Jan24_13-59-10_/events.out.tfevents.1737698353.alexbotmini4090d.150554.0"}
+{"time":"2025-01-24T14:03:54.236649322+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/canmyzt0/file_stream\": EOF"}

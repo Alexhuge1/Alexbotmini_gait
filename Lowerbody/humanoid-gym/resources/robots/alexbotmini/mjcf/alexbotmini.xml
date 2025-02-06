@@ -1,0 +1,158 @@
+<mujoco model="alexbotmini">
+    <compiler angle="radian" meshdir="../meshes/"  eulerseq="zyx" />
+    
+    <option timestep='0.001' iterations='50' solver='PGS' gravity='0 0 -9.81'>
+    <flag sensornoise="enable" frictionloss="enable"/>
+    </option>
+
+    <size njmax="500" nconmax="100" />
+
+
+    <visual>
+        <quality shadowsize='4096'/>
+        <map znear='0.05'/>
+    </visual>
+    <default>
+        <joint limited='true'/>
+        <motor ctrllimited='true'/>
+        <geom  condim='4' contype="1" conaffinity="15" solref='0.001 2' friction='0.9 0.2 0.2'/>
+        <equality solref='0.001 2'/>
+        <default class='leg_joint_param'>
+            <joint  damping="0.01" frictionloss="0.01" armature="0.01"/>
+        </default>
+    </default>
+  <statistic meansize="0.164352" extent="1.07561" center="-0.00820016 -1.48012e-05 -0.160784"/>
+
+    <asset>
+        <mesh name="base_link" file="base_link.STL" />
+        <mesh name="leftlink1" file="leftlink1.STL" />
+        <mesh name="leftlink2" file="leftlink2.STL" />
+        <mesh name="leftlink3" file="leftlink3.STL" />
+        <mesh name="leftlink4" file="leftlink4.STL" />
+        <mesh name="leftlink5" file="leftlink5.STL" />
+        <mesh name="leftlink6" file="leftlink6.STL" />
+        <mesh name="rightlink1" file="rightlink1.STL" />
+        <mesh name="rightlink2" file="rightlink2.STL" />
+        <mesh name="rightlink3" file="rightlink3.STL" />
+        <mesh name="rightlink4" file="rightlink4.STL" />
+        <mesh name="rightlink5" file="rightlink5.STL" />
+        <mesh name="rightlink6" file="rightlink6.STL" />
+        <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true"/>
+        <material name="matgeom" texture="texgeom" texuniform="true" rgba="0.8 0.6 .4 1"/>
+        <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512" mark="cross" markrgb=".8 .8 .8"/>  
+        <texture name="texgeom" type="cube" builtin="flat" mark="cross" width="127" height="1278" rgb1="0.8 0.6 0.4" rgb2="0.8 0.6 0.4" markrgb="1 1 1" random="0.01"/>
+        <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2=".6 .8 1" width="256" height="256"/>
+    </asset>
+
+    <worldbody>
+        <light directional="true" diffuse=".4 .4 .4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false"/>
+        <light directional="true" diffuse=".6 .6 .6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1"/>
+        <geom name="ground" type="plane" size="0 0 1" pos="0.001 0 0" quat="1 0 0 0" material="matplane" condim="1" conaffinity='15'/>
+        <body name="base_link" pos="0 0 0.75">
+            <inertial pos="-5.403e-06 0.00054897 -0.042272" quat="0.99965 0.025389 -0.00023109 -0.00745309" mass="3.703" diaginertia="0.0394207 0.0253231 0.0208888" />
+            <joint name="floating_base_joint" type="free" limited="false" />
+            <site name='imu' size='0.01' pos='0.0 0 0.0' quat='1 0 0 0'/>
+
+            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.75294 0.75294 0.75294 1" mesh="base_link" />
+            <geom size="0.08 0.08 0.06" pos="0 0 -0.06" type="box" rgba="0.75294 0.75294 0.75294 1" />
+            <body name="leftlink1" pos="0 0.091 -0.08">
+                <inertial pos="-0.021825 0.017592 6.1019e-06" quat="0.486808 0.505576 -0.493264 0.513908" mass="1.30624" diaginertia="0.00421885 0.00404898 0.00190957" />
+                <joint name="leftjoint1" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.79216 0.81961 0.93333 1" mesh="leftlink1" />
+                <body name="leftlink2" pos="-0.0816 0.052 -0.0002344">
+                    <inertial pos="0.014318 8.5098e-07 -0.072113" quat="0.679499 -0.194168 -0.194243 0.680331" mass="1.75604" diaginertia="0.0191693 0.0173958 0.00386757" />
+                    <joint name="leftjoint2" pos="0 0 0" axis="-1 0 0" limited="true" range="-1 1" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="leftlink2" />
+                    <geom size="0.075 0.04 0.1" pos="0.08 0 -0.08" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                    <body name="leftlink3" pos="0.078 0 -0.15861">
+                        <inertial pos="-0.00024643 0.0080676 -0.048991" quat="0.990627 -0.0414572 0.00527361 0.130045" mass="2.11496" diaginertia="0.0347786 0.0344557 0.00375969" />
+                        <joint name="leftjoint3" pos="0 0 0" axis="0 0 -1" limited="true" range="-1 1" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="leftlink3" />
+                        <geom size="0.045 0.05" pos="0 0 -0.14" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.89804 0.91765 0.92941 1" />
+                        <body name="leftlink4" pos="0 0.027 -0.142">
+                            <inertial pos="-0.0054767 -0.017536 -0.11984" quat="0.698105 -0.0377389 0.0624439 0.712268" mass="2.17494" diaginertia="0.05352 0.052476 0.00248022" />
+                            <joint name="leftjoint4" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="leftlink4" />
+                            <geom size="0.035 0.04 0.08" pos="0 -0.02 -0.15" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                            <body name="leftlink5" pos="-0.0062437 -0.023 -0.289">
+                                <inertial pos="-1.2466e-08 -1.3708e-08 0" quat="0.707107 0.707107 0 0" mass="0.017311" diaginertia="1.816e-06 1.529e-06 1.28e-06" />
+                                <joint name="leftjoint5" pos="0 0 0" axis="0 -1 0" limited="true" range="-1 1" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="leftlink5" />
+                                <body name="leftlink6" pos="0 0 0">
+                                    <inertial pos="0.029447 0.0002491 -0.034298" quat="0.411252 0.576314 0.56879 0.418582" mass="0.5" diaginertia="0.00321906 0.0030106 0.000696947" />
+                                    <joint name="leftjoint6" pos="0 0 0" axis="1 0 0" limited="true" range="-1 1" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="leftlink6" />
+                                    <geom size="0.05 0.12 0.005" pos="0.05 0 -0.048" quat="0.707388 0 0 0.706825" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body name="rightlink1" pos="0 -0.089 -0.08">
+                <inertial pos="-0.021825 -0.017467 1.1831e-05" quat="0.512035 0.484981 -0.512994 0.489338" mass="1.30624" diaginertia="0.0041748 0.00400505 0.00190547" />
+                <joint name="rightjoint1" pos="0 0 0" axis="0 -1 0" limited="true" range="-1 1" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.79216 0.81961 0.93333 1" mesh="rightlink1" />
+                <body name="rightlink2" pos="-0.0816 -0.052 0.0002344">
+                    <inertial pos="0.014349 -3.4419e-05 -0.072113" quat="0.676733 -0.195112 -0.193511 0.68302" mass="1.75604" diaginertia="0.0191785 0.0174116 0.00388646" />
+                    <joint name="rightjoint2" pos="0 0 0" axis="-1 0 0" limited="true" range="-1 1" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="rightlink2" />
+                    <geom size="0.075 0.04 0.1" pos="0.08 0 -0.08" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                    <body name="rightlink3" pos="0.078 0 -0.15861">
+                        <inertial pos="7.7184e-05 -0.0080763 -0.048796" quat="0.988102 0.0418912 0.00644611 -0.147845" mass="2.115" diaginertia="0.0347216 0.0343664 0.00373375" />
+                        <joint name="rightjoint3" pos="0 0 0" axis="0 0 -1" limited="true" range="-1 1" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="rightlink3" />
+                        <geom size="0.045 0.05" pos="0 0 -0.14" quat="0.707388 0.706825 0 0" type="cylinder" rgba="0.89804 0.91765 0.92941 1" />
+                        <body name="rightlink4" pos="0 -0.027 -0.142">
+                           <inertial pos="-0.00548131 0.0175314 -0.119816" quat="0.697329 -0.0374299 0.0622874 0.713058" mass="2.17494" diaginertia="0.0534854 0.0524539 0.0024926" />
+                            <joint name="rightjoint4" pos="0 0 0" axis="0 -1 0" limited="true" range="-1 1" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.898039 0.917647 0.929412 1" mesh="rightlink4" />
+                            <geom size="0.035 0.04 0.08" pos="0 0.02 -0.15" type="box" rgba="0.898039 0.917647 0.929412 1" />
+                            <body name="rightlink5" pos="-0.0062206 0.025 -0.289">
+                                <inertial pos="2.0918e-06 3.5218e-08 2.6626e-09" quat="0.707114 0.7071 -1.25421e-05 7.44322e-06" mass="0.017311" diaginertia="1.8715e-06 1.5845e-06 1.3811e-06" />
+                                <joint name="rightjoint5" pos="0 0 0" axis="0 1 0" limited="true" range="-1 1" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="rightlink5" />
+                                <body name="rightlink6" pos="0 0 0">
+                                    <inertial pos="0.022759 -0.00027434 -0.031905" quat="0.420318 0.564909 0.57921 0.410764" mass="0.5" diaginertia="0.00304561 0.00284207 0.000663827" />
+                                    <joint name="rightjoint6" pos="0 0 0" axis="-1 0 0" limited="true" range="-1 1" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.89804 0.91765 0.92941 1" mesh="rightlink6" />
+                                    <geom size="0.05 0.12 0.005" pos="0.05 0 -0.048" quat="0.707388 0 0 0.706825" type="box" rgba="0.89804 0.91765 0.92941 1" />
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+    <actuator>
+    <!-- Left Side -->
+    <motor name="leftjoint1" joint="leftjoint1" gear="1" ctrllimited="true" ctrlrange="-96 96"/>
+    <motor name="leftjoint2" joint="leftjoint2" gear="1" ctrllimited="true" ctrlrange="-51 51"/>
+    <motor name="leftjoint3" joint="leftjoint3" gear="1" ctrllimited="true" ctrlrange="-51 51"/>
+    <motor name="leftjoint4" joint="leftjoint4" gear="1" ctrllimited="true" ctrlrange="-96 96"/>
+    <motor name="leftjoint5" joint="leftjoint5" gear="1" ctrllimited="true" ctrlrange="-30 30"/>
+    <motor name="leftjoint6" joint="leftjoint6" gear="1" ctrllimited="true" ctrlrange="-30 30"/>
+    
+    <!-- Right Side -->
+    <motor name="rightjoint1" joint="rightjoint1" gear="1" ctrllimited="true" ctrlrange="-96 96"/>
+    <motor name="rightjoint2" joint="rightjoint2" gear="1" ctrllimited="true" ctrlrange="-51 51"/>
+    <motor name="rightjoint3" joint="rightjoint3" gear="1" ctrllimited="true" ctrlrange="-51 51"/>
+    <motor name="rightjoint4" joint="rightjoint4" gear="1" ctrllimited="true" ctrlrange="-96 96"/>
+    <motor name="rightjoint5" joint="rightjoint5" gear="1" ctrllimited="true" ctrlrange="-30 30"/>
+    <motor name="rightjoint6" joint="rightjoint6" gear="1" ctrllimited="true" ctrlrange="-30 30"/>
+    </actuator>
+
+    <sensor>   
+
+      <framequat     name='orientation' objtype='site' noise='0.001' objname='imu'/>
+      <framepos     name='position' objtype='site' noise='0.001' objname='imu'/>
+      <gyro          name='angular-velocity'    site='imu' noise='0.005' cutoff='34.9'/>
+      <velocimeter   name='linear-velocity'     site='imu' noise='0.001' cutoff='30'/>
+      <accelerometer name='linear-acceleration' site='imu' noise='0.005' cutoff='157'/>
+      <magnetometer  name='magnetometer'        site='imu'/>
+
+    </sensor>
+
+</mujoco>

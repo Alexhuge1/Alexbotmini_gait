@@ -95,7 +95,6 @@ def run_mujoco(policy, cfg):
     Returns:
         None
     """
-    
     model = mujoco.MjModel.from_xml_path(cfg.sim_config.mujoco_model_path)
     model.opt.timestep = cfg.sim_config.dt
     data = mujoco.MjData(model)
@@ -113,16 +112,16 @@ def run_mujoco(policy, cfg):
 
     default_angle = np.zeros((cfg.env.num_actions),dtype=np.double)
 
-    default_angle[0] = -cfg.init_state.default_joint_angles['leftjoint1']
+    default_angle[0] = cfg.init_state.default_joint_angles['leftjoint1']
     default_angle[1] = cfg.init_state.default_joint_angles['leftjoint2']
     default_angle[2] = cfg.init_state.default_joint_angles['leftjoint3']
-    default_angle[3] = -cfg.init_state.default_joint_angles['leftjoint4']
+    default_angle[3] = cfg.init_state.default_joint_angles['leftjoint4']
     default_angle[4] = cfg.init_state.default_joint_angles['leftjoint5']
     default_angle[5] = cfg.init_state.default_joint_angles['leftjoint6']
-    default_angle[6] = -cfg.init_state.default_joint_angles['rightjoint1']
+    default_angle[6] = cfg.init_state.default_joint_angles['rightjoint1']
     default_angle[7] = cfg.init_state.default_joint_angles['rightjoint2']
     default_angle[8] = cfg.init_state.default_joint_angles['rightjoint3']
-    default_angle[9] = -cfg.init_state.default_joint_angles['rightjoint4']
+    default_angle[9] = cfg.init_state.default_joint_angles['rightjoint4']
     default_angle[10] = cfg.init_state.default_joint_angles['rightjoint5']
     default_angle[11] = cfg.init_state.default_joint_angles['rightjoint6']
 
@@ -147,14 +146,13 @@ def run_mujoco(policy, cfg):
             obs[0, 2] = cmd.vx * cfg.normalization.obs_scales.lin_vel
             obs[0, 3] = cmd.vy * cfg.normalization.obs_scales.lin_vel
             obs[0, 4] = cmd.dyaw * cfg.normalization.obs_scales.ang_vel
-            obs[0, 5:17] = (q -default_angle)* cfg.normalization.obs_scales.dof_pos
+            obs[0, 5:17] = (q - default_angle) * cfg.normalization.obs_scales.dof_pos
             obs[0, 17:29] = dq * cfg.normalization.obs_scales.dof_vel
             obs[0, 29:41] = action
             obs[0, 41:44] = omega
             obs[0, 44:47] = eu_ang
 
             obs = np.clip(obs, -cfg.normalization.clip_observations, cfg.normalization.clip_observations)
-            # obs = np.clip(obs, 0, 0)
 
             hist_obs.append(obs)
             hist_obs.popleft()
@@ -164,19 +162,17 @@ def run_mujoco(policy, cfg):
                 policy_input[0, i * cfg.env.num_single_obs : (i + 1) * cfg.env.num_single_obs] = hist_obs[i][0, :]
             action[:] = policy(torch.tensor(policy_input))[0].detach().numpy()
             action = np.clip(action, -cfg.normalization.clip_actions, cfg.normalization.clip_actions)
-            # action = np.clip(action, 0, 0)
-            if count_lowlevel>800:
-                target_q = action * cfg.control.action_scale+default_angle
-                print('target q',target_q*180/3.14)
-            else:
-                target_q=default_angle
 
+            target_q = action * cfg.control.action_scale+default_angle
+        
 
         target_dq = np.zeros((cfg.env.num_actions), dtype=np.double)
         # Generate PD control
         tau = pd_control(target_q, q, cfg.robot_config.kps,
                         target_dq, dq, cfg.robot_config.kds)  # Calc torques
         tau = np.clip(tau, -cfg.robot_config.tau_limit, cfg.robot_config.tau_limit)  # Clamp torques
+        # tau = np.clip(tau, 0, 0)  
+        # print('tau',tau)
         data.ctrl = tau
 
         mujoco.mj_step(model, data)
@@ -190,7 +186,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Deployment script.')
-    parser.add_argument('--load_model', type=str, required=True,
+    parser.add_argument('--load_model', type=str, default='/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/exported/policies/policy_1.pt' ,
                         help='Run to load from.')
     parser.add_argument('--terrain', action='store_true',default='plane', help='terrain or plane')
     args = parser.parse_args()
@@ -199,20 +195,20 @@ if __name__ == '__main__':
 
         class sim_config:
             if args.terrain:
-                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini/alexbotmini.xml'
-
-                
+                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini.xml'
             else:
-                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini/scene.xml'
+                mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/scene.xml'
             sim_duration = 60.0
             dt = 0.001
             decimation = 10
 
         class robot_config:
-            kps = np.array([120, 80, 80, 120, 15, 15, 120, 80, 80, 120, 15, 15], dtype=np.double)
-
-            kds = np.array([3, 2, 2, 3, 0.3, 0.3, 3, 2, 2, 3, 0.3, 0.3,], dtype=np.double)
+            kps = np.array([180, 120, 120, 180, 45, 45, 180, 120, 120, 180, 45, 45], dtype=np.double)
+            kds = np.array([10, 8, 8, 10, 2.5, 2.5, 10, 8, 8, 10, 2.5, 2.5,], dtype=np.double)
             tau_limit = 200. * np.ones(12, dtype=np.double)
+        # stiffness = {'1': 180.0, '2': 120.0, '3': 120.0, '4': 180.0, '5': 45 , '6': 45}
+        # damping = {'1': 10, '2': 8, '3': 8.0, '4': 10, '5': 2.5 , '6' : 2.5}
+           
 
     policy = torch.jit.load(args.load_model)
     run_mujoco(policy, Sim2simCfg())

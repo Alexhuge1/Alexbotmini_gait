@@ -131,10 +131,10 @@ class alexbotminiFreeEnv(LeggedRobot):
         sin_pos_l[sin_pos_l > 0] = 0
         self.ref_dof_pos[:, 0] = sin_pos_l * scale_1 + self.cfg.init_state.default_joint_angles['leftjoint1']
         self.ref_dof_pos[:, 3] = -sin_pos_l * scale_2 + self.cfg.init_state.default_joint_angles['leftjoint4']
-        self.ref_dof_pos[:, 4] = sin_pos_l * scale_1 + self.cfg.init_state.default_joint_angles['leftjoint5']
+        self.ref_dof_pos[:, 4] = -sin_pos_l * scale_1 + self.cfg.init_state.default_joint_angles['leftjoint5']
         # right foot stance phase set to default joint pos
         sin_pos_r[sin_pos_r < 0] = 0
-        self.ref_dof_pos[:, 6] = -sin_pos_r * scale_1 + self.cfg.init_state.default_joint_angles['rightjoint1']
+        self.ref_dof_pos[:, 6] = sin_pos_r * scale_1 + self.cfg.init_state.default_joint_angles['rightjoint1']
         self.ref_dof_pos[:, 9] = -sin_pos_r * scale_2 + self.cfg.init_state.default_joint_angles['rightjoint4']
         self.ref_dof_pos[:, 10] = -sin_pos_r * scale_1 + self.cfg.init_state.default_joint_angles['rightjoint5']
         # Double support phase

@@ -1,0 +1,45 @@
+{
+  "os":  "Linux-5.15.0-131-generic-x86_64-with-glibc2.17",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-02-07T10:39:55.819121Z",
+  "args":  [
+    "--task=alexbotmini"
+  ],
+  "program":  "train.py",
+  "codePath":  "Lowerbody/humanoid-gym/humanoid/scripts/train.py",
+  "git":  {
+    "remote":  "https://github.com/Alexhuge1/Alexbotmini_gait.git",
+    "commit":  "5df2fd4271fe7e23b6a2f5a179ed71b37d62207b"
+  },
+  "email":  "2200958879@qq.com",
+  "root":  "/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts",
+  "host":  "alexbotmini4090d",
+  "executable":  "/home/alexhuge/anaconda3/envs/alexbotmini/bin/python",
+  "codePathLocal":  "train.py",
+  "cpu_count":  16,
+  "cpu_count_logical":  24,
+  "gpu":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "135084904448",
+      "used":  "33125195776"
+    }
+  },
+  "memory":  {
+    "total":  "33363607552"
+  },
+  "cpu":  {
+    "count":  16,
+    "countLogical":  24
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memoryTotal":  "8585740288",
+      "cudaCores":  3072,
+      "architecture":  "Ada"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}

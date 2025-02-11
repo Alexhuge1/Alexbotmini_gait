@@ -151,6 +151,24 @@ def run_mujoco(policy, cfg):
             obs[0, 29:41] = action
             obs[0, 41:44] = omega
             obs[0, 44:47] = eu_ang
+            print(
+
+            )
+            print("obs[0, 0] = ",math.sin(2 * math.pi * count_lowlevel * cfg.sim_config.dt  / 0.64))
+            print("obs[0, 1] = ",math.cos(2 * math.pi * count_lowlevel * cfg.sim_config.dt  / 0.64))
+            print("obs[0, 2] = ",cmd.vx * cfg.normalization.obs_scales.lin_vel)
+            print("obs[0, 3] = ",cmd.vy * cfg.normalization.obs_scales.lin_vel)
+            print("obs[0, 4] = ",cmd.dyaw * cfg.normalization.obs_scales.ang_vel)
+            print("obs[0, 5:17] = ",(q - default_angle) * cfg.normalization.obs_scales.dof_pos)
+            print("obs[0, 17:29] = ",dq * cfg.normalization.obs_scales.dof_vel)
+            print("obs[0, 29:41] = ",action)
+            print("obs[0, 41:44] = ",omega)
+            print("obs[0, 44:47] = ",eu_ang)
+          
+            # print("action = ",action)
+            # print("target_q = ",target_q)
+            # print("target_dq = ",target_dq)
+
 
             obs = np.clip(obs, -cfg.normalization.clip_observations, cfg.normalization.clip_observations)
 

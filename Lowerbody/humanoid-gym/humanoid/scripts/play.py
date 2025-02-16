@@ -43,7 +43,7 @@ from isaacgym.torch_utils import *
 import torch
 from tqdm import tqdm
 from datetime import datetime
-
+import matplotlib.pyplot as plt
 
 def play(args):
     env_cfg, train_cfg = task_registry.get_cfgs(name=args.task)
@@ -87,6 +87,11 @@ def play(args):
     robot_index = 0 # which robot is used for logging
     joint_index = 1 # which joint is used for logging
     stop_state_log = 1200 # number of steps before plotting states
+
+    # 用于存储每个电机的位置环数据
+    num_joints = env.dof_pos.shape[1]
+    joint_positions = [[] for _ in range(num_joints)]
+
     if RENDER:
         camera_properties = gymapi.CameraProperties()
         camera_properties.width = 1920
@@ -125,6 +130,10 @@ def play(args):
 
         obs, critic_obs, rews, dones, infos = env.step(actions.detach())
 
+        # 收集每个电机的位置环数据
+        for j in range(num_joints):
+            joint_positions[j].append(env.dof_pos[robot_index, j].item())
+
         if RENDER:
             env.gym.fetch_results(env.sim, True)
             env.gym.step_graphics(env.sim)
@@ -158,6 +167,20 @@ def play(args):
 
     logger.print_rewards()
     logger.plot_states()
+
+    # 打印每个电机的位置环数据
+    for j in range(num_joints):
+        print(f"Joint {j} positions: {joint_positions[j]}")
+
+    # 绘制每个电机的位置环数据图表
+    plt.figure(figsize=(12, 8))
+    for j in range(num_joints):
+        plt.plot(joint_positions[j], label=f"Joint {j}")
+    plt.xlabel('Step')
+    plt.ylabel('Joint Position')
+    plt.title('Joint Positions over Time')
+    plt.legend()
+    plt.show()
     
     if RENDER:
         video.release()

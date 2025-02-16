@@ -38,9 +38,9 @@ from humanoid import LEGGED_GYM_ROOT_DIR
 from humanoid.envs import alexbotminiCfg
 import torch
 
-
+sim_actions = []
 class cmd:
-    vx = 0.5
+    vx = 0.0
     vy = 0.0
     dyaw = 0.0
 
@@ -182,6 +182,9 @@ def run_mujoco(policy, cfg):
             action = np.clip(action, -cfg.normalization.clip_actions, cfg.normalization.clip_actions)
 
             target_q = action * cfg.control.action_scale+default_angle
+            target_q_degree = np.rad2deg(target_q)  # 转换为角度
+            sim_actions.append(target_q_degree.clone()) #degree
+            # print('sim_actions', self.sim_actions)
         
 
         target_dq = np.zeros((cfg.env.num_actions), dtype=np.double)
@@ -216,7 +219,7 @@ if __name__ == '__main__':
                 mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini.xml'
             else:
                 mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/scene.xml'
-            sim_duration = 60.0
+            sim_duration = 6.0
             dt = 0.001
             decimation = 10
 

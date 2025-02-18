@@ -29,7 +29,7 @@
 
 # based on the original code of the humanoidgym humanoid environment
 from humanoid.envs.base.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
-
+import numpy as np
 
 class alexbotminiCfg(LeggedRobotCfg):
     """
@@ -44,7 +44,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         single_num_privileged_obs = 73
         num_privileged_obs = int(c_frame_stack * single_num_privileged_obs)
         num_actions = 12
-        num_envs = 2048
+        num_envs = 4096
         episode_length_s = 24  # episode length in seconds
         use_ref_actions = False
 
@@ -63,14 +63,14 @@ class alexbotminiCfg(LeggedRobotCfg):
 
         terminate_after_contacts_on = ['base_link','rightlink2','leftlink2','rightlink1','leftlink1']
         penalize_contacts_on = ['base_link','rightlink2','leftlink2','rightlink1','leftlink1']
-        self_collisions = 1  # 1 to disable, 0 to enable...bitwise filter
+        self_collisions = 0  # 1 to disable, 0 to enable...bitwise filter
         flip_visual_attachments = False
         replace_cylinder_with_capsule = False
         fix_base_link = False
 
     class terrain(LeggedRobotCfg.terrain):
-        mesh_type = 'plane'
-        # mesh_type = 'trimesh'
+        # mesh_type = 'plane'
+        mesh_type = 'trimesh'
         curriculum = False
         # rough terrain only:
         measure_heights = False
@@ -132,8 +132,12 @@ class alexbotminiCfg(LeggedRobotCfg):
 
     class control(LeggedRobotCfg.control):
         # PD Drive parameters:
-        stiffness = {'1': 180.0, '2': 120.0, '3': 120.0, '4': 180.0, '5': 45 , '6': 45}
-        damping = {'1': 10, '2': 8, '3': 8.0, '4': 10, '5': 2.5 , '6' : 2.5}
+        # stiffness = {'1': 180.0, '2': 120.0, '3': 120.0, '4': 180.0, '5': 45 , '6': 45}
+        # damping = {'1': 10, '2': 8, '3': 8.0, '4': 10, '5': 2.5 , '6' : 2.5}
+        stiffness = {'1': 180*0.4, '2': 200*0.4, '3': 120*0.4, '4': 180*0.4, '5': 120*0.4 , '6': 120*0.4}
+        damping = {'1': 10*0.7, '2': 8*0.7, '3': 8.0*0.7, '4': 6*0.7, '5': 6*0.7 , '6' : 6*0.7}
+        # kps = np.array([180, 200, 120, 180, 120, 120, 180, 200, 120, 180, 120, 120], dtype=np.double)*0.4
+        # kds = np.array([ 10, 8, 8, 10, 6, 6, 10, 8, 8, 10, 6, 6,], dtype=np.double)*0.7
         # action scale: target angle = actionScale * action + defaultAngle
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT
@@ -162,7 +166,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         randomize_friction = True
         friction_range = [0.1, 2.0]
         randomize_base_mass = True
-        added_mass_range = [-1, 1]
+        added_mass_range = [-2, 2]
         push_robots = True
         push_interval_s = 4
         max_push_vel_xy = 0.2
@@ -176,8 +180,8 @@ class alexbotminiCfg(LeggedRobotCfg):
         heading_command = True  # if true: compute ang vel command from heading error
 
         class ranges:
-            lin_vel_x = [-0.3, 0.6]   # min max [m/s]
-            lin_vel_y = [-0.3, 0.6]   # min max [m/s]
+            lin_vel_x = [-1.2, 1.5]   # min max [m/s]
+            lin_vel_y = [-0.3, 0.3]   # min max [m/s]
             ang_vel_yaw = [-0.3, 0.3] # min max [rad/s]
             heading = [-3.14, 3.14]
 
@@ -219,7 +223,7 @@ class alexbotminiCfg(LeggedRobotCfg):
             base_height = 0.25
             base_acc = 0.3
             # energy
-            action_smoothness = -0.1
+            action_smoothness = -0.06
             torques = -1e-5
             dof_vel = -5e-4
             dof_acc = -1e-7

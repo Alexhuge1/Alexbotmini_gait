@@ -43,15 +43,27 @@ from isaacgym.torch_utils import *
 import torch
 from tqdm import tqdm
 from datetime import datetime
-import matplotlib.pyplot as plt
+
+from humanoid.scripts.ps5_joystick import ps5_joystick
+import os
+from fcntl import ioctl
+import threading
+
+
 
 def play(args):
+    # 启动事件处理线程ps5_joystick
+    joystick = ps5_joystick()
+    event_thread = threading.Thread(target=joystick.handle_events)
+    event_thread.daemon = True
+    event_thread.start()
+
     env_cfg, train_cfg = task_registry.get_cfgs(name=args.task)
     # override some parameters for testing
-    env_cfg.env.num_envs = min(env_cfg.env.num_envs, 1)
+    env_cfg.env.num_envs = min(env_cfg.env.num_envs, 125)
     env_cfg.sim.max_gpu_contact_pairs = 2**10
-    # env_cfg.terrain.mesh_type = 'trimesh'
-    env_cfg.terrain.mesh_type = 'plane'
+    env_cfg.terrain.mesh_type = 'trimesh'
+    # env_cfg.terrain.mesh_type = 'plane'
     env_cfg.terrain.num_rows = 5
     env_cfg.terrain.num_cols = 5
     env_cfg.terrain.curriculum = False     
@@ -87,11 +99,6 @@ def play(args):
     robot_index = 0 # which robot is used for logging
     joint_index = 1 # which joint is used for logging
     stop_state_log = 1200 # number of steps before plotting states
-
-    # 用于存储每个电机的位置环数据
-    num_joints = env.dof_pos.shape[1]
-    joint_positions = [[] for _ in range(num_joints)]
-
     if RENDER:
         camera_properties = gymapi.CameraProperties()
         camera_properties.width = 1920
@@ -119,20 +126,23 @@ def play(args):
         video = cv2.VideoWriter(dir, fourcc, 50.0, (1920, 1080))
 
     for i in tqdm(range(stop_state_log)):
-
+        
         actions = policy(obs.detach()) # * 0.
         
         if FIX_COMMAND:
-            env.commands[:, 0] = 0.5    # 1.0
-            env.commands[:, 1] = 0.
-            env.commands[:, 2] = 0.
-            env.commands[:, 3] = 0.
+            stick_values = joystick.get_stick_values()
+           
+            # env.commands[:, 0] = 0.4
+            env.commands[:, 0] = stick_values["left_stick_y"]/32768  # max1.0
+            # print('stick_values["left_stick_x"]/32768',stick_values["left_stick_x"]/32768)
+            env.commands[:, 1] = -stick_values["left_stick_x"]/32768
+            # print('stick_values["left_stick_y"]/32768',stick_values["left_stick_y"]/32768)
+            env.commands[:, 2] = stick_values["right_stick_x"]/32768
+            # print('stick_values["right_stick_x"]/32768',stick_values["right_stick_x"]/32768)
+            env.commands[:, 3] = stick_values["right_stick_y"]/32768
+            # print('stick_values["right_stick_y"]/32768',stick_values["right_stick_y"]/32768)
 
         obs, critic_obs, rews, dones, infos = env.step(actions.detach())
-
-        # 收集每个电机的位置环数据
-        for j in range(num_joints):
-            joint_positions[j].append(env.dof_pos[robot_index, j].item())
 
         if RENDER:
             env.gym.fetch_results(env.sim, True)
@@ -167,20 +177,6 @@ def play(args):
 
     logger.print_rewards()
     logger.plot_states()
-
-    # 打印每个电机的位置环数据
-    for j in range(num_joints):
-        print(f"Joint {j} positions: {joint_positions[j]}")
-
-    # 绘制每个电机的位置环数据图表
-    plt.figure(figsize=(12, 8))
-    for j in range(num_joints):
-        plt.plot(joint_positions[j], label=f"Joint {j}")
-    plt.xlabel('Step')
-    plt.ylabel('Joint Position')
-    plt.title('Joint Positions over Time')
-    plt.legend()
-    plt.show()
     
     if RENDER:
         video.release()

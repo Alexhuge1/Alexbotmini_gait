@@ -29,7 +29,7 @@
         xyz="-5.403E-06 0.00054897 -0.042272"
         rpy="0 0 0" />
       <mass
-        value="3.703" />
+        value="5" />
       <inertia
         ixx="0.03941761"
         ixy="-0.00021040"
@@ -109,7 +109,7 @@
       lower="-1"
       upper="1"
       effort="96"
-      velocity="20" />
+      velocity="10.47" />
   </joint>
   <link
     name="leftlink2">
@@ -166,7 +166,7 @@
       lower="-1"
       upper="1"
       effort="51"
-      velocity="13" />
+      velocity="6.17" />
   </joint>
   <link
     name="leftlink3">
@@ -223,7 +223,7 @@
       lower="-1"
       upper="1"
       effort="51"
-      velocity="13" />
+      velocity="6.17" />
   </joint>
   <link
     name="leftlink4">
@@ -280,7 +280,7 @@
       lower="-1"
       upper="1"
       effort="96"
-      velocity="20" />
+      velocity="10.47" />
   </joint>
   <link
     name="leftlink5">
@@ -330,7 +330,7 @@
       lower="-1"
       upper="1"
       effort="30"
-      velocity="22" />
+      velocity="13" />
   </joint>
   <link
     name="leftlink6">
@@ -384,10 +384,10 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-1"
-      upper="1"
+      lower="-0"
+      upper="0"
       effort="30"
-      velocity="22" />
+      velocity="13" />
   </joint>
   <link
     name="rightlink1">
@@ -437,7 +437,7 @@
       lower="-1"
       upper="1"
       effort="96"
-      velocity="20" />
+      velocity="10.47" />
   </joint>
   <link
     name="rightlink2">
@@ -494,7 +494,7 @@
       lower="-1"
       upper="1"
       effort="51"
-      velocity="13" />
+      velocity="6.17" />
   </joint>
   <link
     name="rightlink3">
@@ -551,7 +551,7 @@
       lower="-1"
       upper="1"
       effort="51"
-      velocity="13" />
+      velocity="6.17" />
   </joint>
   <link
     name="rightlink4">
@@ -608,7 +608,7 @@
       lower="-1"
       upper="1"
       effort="96"
-      velocity="20" />
+      velocity="10.47" />
   </joint>
   <link
     name="rightlink5">
@@ -658,7 +658,7 @@
       lower="-1"
       upper="1"
       effort="30"
-      velocity="22" />
+      velocity="13.67" />
   </joint>
   <link
     name="rightlink6">
@@ -715,7 +715,7 @@
       lower="-1"
       upper="1"
       effort="30"
-      velocity="22" />
+      velocity="13.67" />
   </joint>
 
 </robot>

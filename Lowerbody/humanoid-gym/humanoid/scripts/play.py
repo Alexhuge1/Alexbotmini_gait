@@ -53,10 +53,10 @@ import threading
 
 def play(args):
     # 启动事件处理线程ps5_joystick
-    joystick = ps5_joystick()
-    event_thread = threading.Thread(target=joystick.handle_events)
-    event_thread.daemon = True
-    event_thread.start()
+    # joystick = ps5_joystick()
+    # event_thread = threading.Thread(target=joystick.handle_events)
+    # event_thread.daemon = True
+    # event_thread.start()
 
     env_cfg, train_cfg = task_registry.get_cfgs(name=args.task)
     # override some parameters for testing
@@ -132,15 +132,18 @@ def play(args):
         if FIX_COMMAND:
             stick_values = joystick.get_stick_values()
            
-            # env.commands[:, 0] = 0.4
-            env.commands[:, 0] = stick_values["left_stick_y"]/32768  # max1.0
-            # print('stick_values["left_stick_x"]/32768',stick_values["left_stick_x"]/32768)
-            env.commands[:, 1] = -stick_values["left_stick_x"]/32768
-            # print('stick_values["left_stick_y"]/32768',stick_values["left_stick_y"]/32768)
-            env.commands[:, 2] = stick_values["right_stick_x"]/32768
-            # print('stick_values["right_stick_x"]/32768',stick_values["right_stick_x"]/32768)
-            env.commands[:, 3] = stick_values["right_stick_y"]/32768
-            # print('stick_values["right_stick_y"]/32768',stick_values["right_stick_y"]/32768)
+            env.commands[:, 0] = 0.4
+            env.commands[:, 1] = 0
+            env.commands[:, 2] = 0
+            env.commands[:, 3] = 0
+            # env.commands[:, 0] = stick_values["left_stick_y"]/32768  # max1.0
+            # # print('stick_values["left_stick_x"]/32768',stick_values["left_stick_x"]/32768)
+            # env.commands[:, 1] = -stick_values["left_stick_x"]/32768
+            # # print('stick_values["left_stick_y"]/32768',stick_values["left_stick_y"]/32768)
+            # env.commands[:, 2] = stick_values["right_stick_x"]/32768
+            # # print('stick_values["right_stick_x"]/32768',stick_values["right_stick_x"]/32768)
+            # env.commands[:, 3] = stick_values["right_stick_y"]/32768
+            # # print('stick_values["right_stick_y"]/32768',stick_values["right_stick_y"]/32768)
 
         obs, critic_obs, rews, dones, infos = env.step(actions.detach())
 

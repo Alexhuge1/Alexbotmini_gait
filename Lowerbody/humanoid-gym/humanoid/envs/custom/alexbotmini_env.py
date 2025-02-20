@@ -538,3 +538,30 @@ class alexbotminiFreeEnv(LeggedRobot):
             self.actions + self.last_last_actions - 2 * self.last_actions), dim=1)
         term_3 = 0.05 * torch.sum(torch.abs(self.actions), dim=1)
         return term_1 + term_2 + term_3
+    
+    def _reward_ankle_movement(self):
+        """ Penalize ankle joint movement to encourage stability """
+        # 左右脚踝关节索引（根据实际关节配置调整）
+        ankle_indices = [5, 11]  # 左joint5和右joint5
+        
+        # 计算脚踝位置与默认位置的差异
+        ankle_pos_diff = self.dof_pos[:, ankle_indices] - self.default_dof_pos[:, ankle_indices]
+        
+        # 计算脚踝速度
+        ankle_vel = self.dof_vel[:, ankle_indices]
+        
+        # 综合惩罚项（位置差异的平方和 + 速度的平方和）
+        penalty = torch.sum(torch.square(ankle_pos_diff), dim=1) * 0.5 + \
+                torch.sum(torch.square(ankle_vel), dim=1) * 0.02
+        
+        # 指数衰减形式（更平滑的奖励曲线）
+        reward = torch.exp(-penalty * 10)  # 衰减系数10控制曲线陡峭度
+        
+        return reward
+        # 参数调节建议（基于典型值范围）：
+        #     位置惩罚系数：0.3-0.8，当脚踝偏离默认位置0.1弧度时，惩罚值约0.01，偏离0.2弧度时惩罚值约0.04
+        #     速度惩罚系数：0.01-0.05，脚踝速度1 rad/s时惩罚值约0.01，速度2 rad/s时惩罚值约0.04
+        #     指数衰减系数：5-15，控制奖励衰减速度，值越大对微小运动越敏感
+        #     典型输出范围： 完全静止时：≈1.0，控制奖励衰减速度，值越大对微小运动越敏感，当总惩罚值0.1时奖励≈0.37，0.2时≈0.14
+        #     完全静止时：≈1.0，正常运动时：0.6-0.9，剧烈运动时：0.1-0.5
+        #     建议在奖励权重配置中给0.2-0.5的权重

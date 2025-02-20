@@ -223,11 +223,14 @@ class alexbotminiCfg(LeggedRobotCfg):
             base_height = 0.25
             base_acc = 0.3
             # energy
-            action_smoothness = -0.06
+            action_smoothness = -0.02
             torques = -1e-5
             dof_vel = -5e-4
             dof_acc = -1e-7
             collision = -1.
+            # ankle movement reward
+            ankle_movement = 0.3
+
 
     class normalization:
         class obs_scales:
@@ -262,7 +265,7 @@ class alexbotminiCfgPPO(LeggedRobotCfgPPO):
         policy_class_name = 'ActorCritic'
         algorithm_class_name = 'PPO'
         num_steps_per_env = 60  # per iteration
-        max_iterations = 12001  # number of policy updates
+        max_iterations = 3001  # number of policy updates
 
         # logging
         save_interval = 100  # Please check for potential savings every `save_interval` iterations.

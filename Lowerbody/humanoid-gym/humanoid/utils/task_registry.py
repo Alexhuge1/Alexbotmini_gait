@@ -155,7 +155,7 @@ class TaskRegistry():
         if resume:
             # load previously trained model
             resume_path = get_load_path(log_root, load_run=train_cfg.runner.load_run, checkpoint=train_cfg.runner.checkpoint)
-            # resume_path = '/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb07_02-37-31_(3star)/model_3000.pt' 
+            resume_path = '/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb18_01-06-04_(2stars)refined/model_6001.pt'
             print(f"Loading model from: {resume_path}")
             runner.load(resume_path, load_optimizer=False)
         return runner, train_cfg

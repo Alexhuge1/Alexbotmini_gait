@@ -149,8 +149,8 @@ def run_mujoco(policy, cfg):
             obs[0, 5:17] = (q - default_angle) * cfg.normalization.obs_scales.dof_pos
             obs[0, 17:29] = dq * cfg.normalization.obs_scales.dof_vel
             obs[0, 29:41] = action
-            obs[0, 41:44] = omega
-            obs[0, 44:47] = eu_ang
+            obs[0, 41:44] = omega #ang vel
+            obs[0, 44:47] = eu_ang #euler angle
             print(
 
             )

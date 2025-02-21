@@ -204,7 +204,7 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Deployment script.')
-    parser.add_argument('--load_model', type=str, default='/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/exported/policies/policy_1.pt' ,
+    parser.add_argument('--load_model', type=str, default='/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/exported/policies/sim2sim/policy_1.pt' ,
                         help='Run to load from.')
     parser.add_argument('--terrain', action='store_true',default='plane', help='terrain or plane')
     args = parser.parse_args()

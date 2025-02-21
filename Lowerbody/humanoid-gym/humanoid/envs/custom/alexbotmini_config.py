@@ -135,7 +135,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         # stiffness = {'1': 180.0, '2': 120.0, '3': 120.0, '4': 180.0, '5': 45 , '6': 45}
         # damping = {'1': 10, '2': 8, '3': 8.0, '4': 10, '5': 2.5 , '6' : 2.5}
         stiffness = {'1': 180*0.4, '2': 200*0.4, '3': 120*0.4, '4': 180*0.4, '5': 120*0.4 , '6': 120*0.4}
-        damping = {'1': 10*0.7, '2': 8*0.7, '3': 8.0*0.7, '4': 6*0.7, '5': 6*0.7 , '6' : 6*0.7}
+        damping = {'1': 10*0.8, '2': 8*0.8, '3': 8.0*0.8, '4': 10*0.8, '5': 6*0.8 , '6' : 6*0.8}
         # kps = np.array([180, 200, 120, 180, 120, 120, 180, 200, 120, 180, 120, 120], dtype=np.double)*0.4
         # kds = np.array([ 10, 8, 8, 10, 6, 6, 10, 8, 8, 10, 6, 6,], dtype=np.double)*0.7
         # action scale: target angle = actionScale * action + defaultAngle
@@ -265,10 +265,10 @@ class alexbotminiCfgPPO(LeggedRobotCfgPPO):
         policy_class_name = 'ActorCritic'
         algorithm_class_name = 'PPO'
         num_steps_per_env = 60  # per iteration
-        max_iterations = 3001  # number of policy updates
+        max_iterations = 12001  # number of policy updates
 
         # logging
-        save_interval = 100  # Please check for potential savings every `save_interval` iterations.
+        save_interval = 1000  # Please check for potential savings every `save_interval` iterations.
         experiment_name = 'alexbotmini'
         run_name = ''
         # Load and resume

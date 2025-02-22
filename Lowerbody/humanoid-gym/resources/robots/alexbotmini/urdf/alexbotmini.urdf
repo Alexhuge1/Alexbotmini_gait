@@ -28,8 +28,7 @@
       <origin
         xyz="-5.403E-06 0.00054897 -0.042272"
         rpy="0 0 0" />
-      <mass
-        value="5" />
+      <mass value="3.703" />
       <inertia
         ixx="0.03941761"
         ixy="-0.00021040"
@@ -384,8 +383,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="-0"
-      upper="0"
+      lower="-1"
+      upper="1"
       effort="30"
       velocity="13" />
   </joint>

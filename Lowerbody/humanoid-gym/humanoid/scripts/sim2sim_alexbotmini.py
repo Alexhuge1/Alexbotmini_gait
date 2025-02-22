@@ -204,8 +204,8 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Deployment script.')
-    parser.add_argument('--load_model', type=str, default='/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/exported/policies/sim2sim/policy_1.pt' ,
-                        help='Run to load from.')
+    # parser.add_argument('--load_model', type=str, default='/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/exported/policies/sim2sim/policy_1.pt' ,help='Run to load from.')
+    parser.add_argument('--load_model', type=str, default='/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/exported/policies/policy_1.pt' ,help='Run to load from.')
     parser.add_argument('--terrain', action='store_true',default='plane', help='terrain or plane')
     args = parser.parse_args()
 
@@ -222,7 +222,7 @@ if __name__ == '__main__':
 
         class robot_config:
             kps = np.array([180, 200, 120, 180, 120, 120, 180, 200, 120, 180, 120, 120], dtype=np.double)*0.4
-            kds = np.array([ 10, 8, 8, 10, 6, 6, 10, 8, 8, 10, 6, 6,], dtype=np.double)*0.7
+            kds = np.array([ 10, 8, 8, 10, 6, 6, 10, 8, 8, 10, 6, 6,], dtype=np.double)*0.8
             tau_limit = 200. * np.ones(12, dtype=np.double)
 
 

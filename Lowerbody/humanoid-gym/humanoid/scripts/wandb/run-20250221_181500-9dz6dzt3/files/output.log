@@ -1,0 +1,126 @@
+[34m[1mwandb[0m: [33mWARNING[0m Found log directory outside of given root_logdir, dropping given root_logdir for event file in /home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb21_18-14-59_
+################################################################################
+                      [1m Learning iteration 0/3001 [0m
+
+                       Computation: 54320 steps/s (collection: 4.412s, learning 0.112s)
+               Value function loss: 0.0197
+                    Surrogate loss: -0.0022
+             Mean action noise std: 1.00
+                       Mean reward: 0.66
+               Mean episode length: 31.61
+Mean episode rew_action_smoothness: -0.0048
+         Mean episode rew_base_acc: 0.0006
+      Mean episode rew_base_height: 0.0001
+        Mean episode rew_collision: -0.0000
+Mean episode rew_default_joint_pos: 0.0016
+          Mean episode rew_dof_acc: -0.0007
+          Mean episode rew_dof_vel: -0.0005
+    Mean episode rew_feet_air_time: 0.0001
+   Mean episode rew_feet_clearance: 0.0000
+Mean episode rew_feet_contact_forces: -0.0017
+Mean episode rew_feet_contact_number: 0.0064
+    Mean episode rew_feet_distance: 0.0038
+        Mean episode rew_foot_slip: -0.0033
+        Mean episode rew_joint_pos: 0.0047
+    Mean episode rew_knee_distance: 0.0020
+        Mean episode rew_low_speed: -0.0028
+      Mean episode rew_orientation: 0.0063
+          Mean episode rew_torques: -0.0002
+   Mean episode rew_track_vel_hard: -0.0012
+ Mean episode rew_tracking_ang_vel: 0.0053
+ Mean episode rew_tracking_lin_vel: 0.0097
+ Mean episode rew_vel_mismatch_exp: 0.0028
+        Mean episode terrain_level: 9.5464
+--------------------------------------------------------------------------------
+                   Total timesteps: 245760
+                    Iteration time: 4.52s
+                        Total time: 4.52s
+                               ETA: 13577.2s
+
+################################################################################
+                      [1m Learning iteration 1/3001 [0m
+
+                       Computation: 89187 steps/s (collection: 2.644s, learning 0.111s)
+               Value function loss: 0.0164
+                    Surrogate loss: -0.0001
+             Mean action noise std: 1.00
+                       Mean reward: 1.58
+               Mean episode length: 119.55
+Mean episode rew_action_smoothness: -0.0159
+         Mean episode rew_base_acc: 0.0018
+      Mean episode rew_base_height: 0.0005
+        Mean episode rew_collision: -0.0003
+Mean episode rew_default_joint_pos: 0.0035
+          Mean episode rew_dof_acc: -0.0021
+          Mean episode rew_dof_vel: -0.0015
+    Mean episode rew_feet_air_time: 0.0003
+   Mean episode rew_feet_clearance: 0.0001
+Mean episode rew_feet_contact_forces: -0.0030
+Mean episode rew_feet_contact_number: 0.0165
+    Mean episode rew_feet_distance: 0.0110
+        Mean episode rew_foot_slip: -0.0096
+        Mean episode rew_joint_pos: 0.0106
+    Mean episode rew_knee_distance: 0.0059
+        Mean episode rew_low_speed: -0.0067
+      Mean episode rew_orientation: 0.0077
+          Mean episode rew_torques: -0.0005
+   Mean episode rew_track_vel_hard: -0.0058
+ Mean episode rew_tracking_ang_vel: 0.0146
+ Mean episode rew_tracking_lin_vel: 0.0170
+ Mean episode rew_vel_mismatch_exp: 0.0075
+        Mean episode terrain_level: 9.5464
+--------------------------------------------------------------------------------
+                   Total timesteps: 491520
+                    Iteration time: 2.76s
+                        Total time: 7.28s
+                               ETA: 10919.7s
+
+################################################################################
+                      [1m Learning iteration 2/3001 [0m
+
+                       Computation: 88455 steps/s (collection: 2.667s, learning 0.112s)
+               Value function loss: 0.0177
+                    Surrogate loss: 0.0003
+             Mean action noise std: 0.99
+                       Mean reward: 2.62
+               Mean episode length: 165.73
+Mean episode rew_action_smoothness: -0.0261
+         Mean episode rew_base_acc: 0.0030
+      Mean episode rew_base_height: 0.0009
+        Mean episode rew_collision: -0.0004
+Mean episode rew_default_joint_pos: 0.0059
+          Mean episode rew_dof_acc: -0.0033
+          Mean episode rew_dof_vel: -0.0022
+    Mean episode rew_feet_air_time: 0.0004
+   Mean episode rew_feet_clearance: 0.0002
+Mean episode rew_feet_contact_forces: -0.0038
+Mean episode rew_feet_contact_number: 0.0276
+    Mean episode rew_feet_distance: 0.0179
+        Mean episode rew_foot_slip: -0.0160
+        Mean episode rew_joint_pos: 0.0165
+    Mean episode rew_knee_distance: 0.0095
+        Mean episode rew_low_speed: -0.0100
+      Mean episode rew_orientation: 0.0118
+          Mean episode rew_torques: -0.0008
+   Mean episode rew_track_vel_hard: -0.0088
+ Mean episode rew_tracking_ang_vel: 0.0246
+ Mean episode rew_tracking_lin_vel: 0.0322
+ Mean episode rew_vel_mismatch_exp: 0.0131
+        Mean episode terrain_level: 9.5464
+--------------------------------------------------------------------------------
+                   Total timesteps: 737280
+                    Iteration time: 2.78s
+                        Total time: 10.06s
+                               ETA: 10054.8s
+Traceback (most recent call last):
+  File "train.py", line 43, in <module>
+    train(args)
+  File "train.py", line 39, in train
+    ppo_runner.learn(num_learning_iterations=train_cfg.runner.max_iterations, init_at_random_ep_len=True)
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/algo/ppo/on_policy_runner.py", line 130, in learn
+    obs, privileged_obs, rewards, dones, infos = self.env.step(actions)
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/envs/custom/alexbotmini_env.py", line 197, in step
+    return super().step(actions)
+  File "/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/envs/base/legged_robot.py", line 98, in step
+    self.gym.simulate(self.sim)
+KeyboardInterrupt

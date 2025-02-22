@@ -1,0 +1,17 @@
+{"time":"2025-02-21T18:15:50.142826925+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250221_181549-71vihapl/logs/debug-core.log"}
+{"time":"2025-02-21T18:15:50.245532287+08:00","level":"INFO","msg":"created new stream","id":"71vihapl"}
+{"time":"2025-02-21T18:15:50.245569419+08:00","level":"INFO","msg":"stream: started","id":"71vihapl"}
+{"time":"2025-02-21T18:15:50.245605747+08:00","level":"INFO","msg":"handler: started","stream_id":"71vihapl"}
+{"time":"2025-02-21T18:15:50.245624777+08:00","level":"INFO","msg":"sender: started","stream_id":"71vihapl"}
+{"time":"2025-02-21T18:15:50.24562854+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"71vihapl"}
+{"time":"2025-02-21T18:15:50.86953274+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T18:16:00.968363354+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-02-21T18:16:00.968558743+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb21_18-15-48_/events.out.tfevents.1740132950.alexhuge4090d.402989.0"}
+{"time":"2025-02-21T19:30:54.919384757+08:00","level":"INFO","msg":"stream: closing","id":"71vihapl"}
+{"time":"2025-02-21T19:30:54.919401777+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T19:30:54.919750494+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T19:30:56.857126379+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T19:30:57.316931411+08:00","level":"INFO","msg":"handler: closed","stream_id":"71vihapl"}
+{"time":"2025-02-21T19:30:57.317014602+08:00","level":"INFO","msg":"sender: closed","stream_id":"71vihapl"}
+{"time":"2025-02-21T19:30:57.317016604+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"71vihapl"}
+{"time":"2025-02-21T19:30:57.317210921+08:00","level":"INFO","msg":"stream: closed","id":"71vihapl"}

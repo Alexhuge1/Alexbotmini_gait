@@ -1,0 +1,120 @@
+{"time":"2025-02-21T21:27:55.627910792+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250221_212755-4hospb7a/logs/debug-core.log"}
+{"time":"2025-02-21T21:27:55.729580873+08:00","level":"INFO","msg":"created new stream","id":"4hospb7a"}
+{"time":"2025-02-21T21:27:55.729613692+08:00","level":"INFO","msg":"stream: started","id":"4hospb7a"}
+{"time":"2025-02-21T21:27:55.729610902+08:00","level":"INFO","msg":"handler: started","stream_id":"4hospb7a"}
+{"time":"2025-02-21T21:27:55.729625661+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"4hospb7a"}
+{"time":"2025-02-21T21:27:55.729641027+08:00","level":"INFO","msg":"sender: started","stream_id":"4hospb7a"}
+{"time":"2025-02-21T21:27:56.148846034+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T21:28:06.236836879+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-02-21T21:28:06.237208471+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb21_21-27-54_/events.out.tfevents.1740144476.alexhuge4090d.550886.0"}
+{"time":"2025-02-21T21:28:36.923436828+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:28:49.312016908+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:29:30.70777194+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:29:43.276709419+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:30:30.688180564+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:30:43.135462285+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:31:36.297741408+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:31:48.95747229+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:32:36.306677299+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:33:36.341252224+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:33:48.88021067+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:34:36.444313355+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:34:48.732997301+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:35:36.350309099+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:35:48.581564616+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:36:37.145494949+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:36:49.463598167+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:37:34.181300142+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:37:46.433358723+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:38:34.148982442+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:38:46.747507247+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:39:34.252022084+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:39:46.925870971+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:40:37.509509833+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:40:49.788781191+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:41:30.288195284+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:41:42.636090478+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:42:30.675328585+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:42:43.23042236+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:43:34.965544985+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:44:35.097950143+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:44:47.322567516+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:45:35.076180894+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:45:47.503704144+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:46:35.0826751+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:46:47.628583765+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": unexpected EOF"}
+{"time":"2025-02-21T21:47:34.964106478+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:47:47.227023194+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:48:34.992090445+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:49:35.071544274+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:49:47.585169973+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:50:34.992517816+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:50:47.533210889+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:51:34.953490732+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:52:34.983054996+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:53:35.024222643+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:54:35.030004893+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:55:35.0384062+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:56:34.966505774+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:57:35.088012239+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:58:35.1575581+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:58:47.359238214+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T21:59:35.096974589+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:00:35.07203445+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:01:35.067173046+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:02:34.962610348+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:03:35.004557336+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:04:35.09905482+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:05:35.107998955+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:06:34.966581593+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:07:35.021360001+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:10:34.972290779+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:13:35.164763986+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:17:35.16831698+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": unexpected EOF"}
+{"time":"2025-02-21T22:18:35.097850906+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:21:34.949841171+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:24:35.098289489+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:25:34.988180054+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:26:35.020532193+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:27:35.052127206+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:29:35.050022966+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:30:35.072122838+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:30:47.462112544+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:31:34.964056299+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:32:35.032666958+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:33:35.091812162+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:34:34.950214302+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:35:35.101416134+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:35:47.35019099+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:36:36.258664227+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:36:48.761617482+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:37:36.341911552+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:38:36.3454796+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:39:36.299951949+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:40:36.316850005+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:40:48.668468942+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:41:36.36214841+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:41:48.468207068+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:42:36.30391525+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:43:36.376535801+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:43:48.686588202+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:44:36.37798752+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:44:49.225603872+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:44:57.85149215+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-02-21T22:45:28.523218731+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:45:40.745301226+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:45:55.795925028+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:45:57.906197607+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-02-21T22:46:13.833708515+08:00","level":"INFO","msg":"stream: closing","id":"4hospb7a"}
+{"time":"2025-02-21T22:46:13.833722118+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T22:46:13.834046909+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T22:46:31.597430847+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:46:43.835586928+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-02-21T22:46:43.886076133+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-02-21T22:46:43.98598159+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:46:58.171473119+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2200958879-harbin-institute-of-technology/XBot/4hospb7a/file_stream\": EOF"}
+{"time":"2025-02-21T22:47:01.217252286+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T22:47:07.945896159+08:00","level":"INFO","msg":"handler: closed","stream_id":"4hospb7a"}
+{"time":"2025-02-21T22:47:07.945953428+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"4hospb7a"}
+{"time":"2025-02-21T22:47:07.945974971+08:00","level":"INFO","msg":"sender: closed","stream_id":"4hospb7a"}
+{"time":"2025-02-21T22:47:07.946033885+08:00","level":"INFO","msg":"stream: closed","id":"4hospb7a"}

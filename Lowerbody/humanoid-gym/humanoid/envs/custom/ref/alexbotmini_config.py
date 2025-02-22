@@ -44,7 +44,7 @@ class alexbotminiCfg(LeggedRobotCfg):
         single_num_privileged_obs = 73
         num_privileged_obs = int(c_frame_stack * single_num_privileged_obs)
         num_actions = 12
-        num_envs = 1000
+        num_envs = 1024
         episode_length_s = 24  # episode length in seconds
         use_ref_actions = False
 

@@ -1,0 +1,17 @@
+{"time":"2025-02-21T18:15:00.607538148+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250221_181500-9dz6dzt3/logs/debug-core.log"}
+{"time":"2025-02-21T18:15:00.710327519+08:00","level":"INFO","msg":"created new stream","id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:00.710366322+08:00","level":"INFO","msg":"stream: started","id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:00.710393538+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:00.710418951+08:00","level":"INFO","msg":"handler: started","stream_id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:00.71044106+08:00","level":"INFO","msg":"sender: started","stream_id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:01.211820219+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T18:15:11.301069045+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-02-21T18:15:11.301179576+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb21_18-14-59_/events.out.tfevents.1740132901.alexhuge4090d.402341.0"}
+{"time":"2025-02-21T18:15:13.702408315+08:00","level":"INFO","msg":"stream: closing","id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:13.702431062+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T18:15:13.702900694+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T18:15:22.705437435+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T18:15:23.02046025+08:00","level":"INFO","msg":"handler: closed","stream_id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:23.0204884+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:23.020495324+08:00","level":"INFO","msg":"sender: closed","stream_id":"9dz6dzt3"}
+{"time":"2025-02-21T18:15:23.020542249+08:00","level":"INFO","msg":"stream: closed","id":"9dz6dzt3"}

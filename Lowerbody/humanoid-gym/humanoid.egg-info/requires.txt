@@ -1,9 +1,0 @@
-isaacgym
-wandb
-tensorboard
-tqdm
-numpy==1.23.5
-opencv-python
-mujoco==2.3.6
-mujoco-python-viewer
-matplotlib

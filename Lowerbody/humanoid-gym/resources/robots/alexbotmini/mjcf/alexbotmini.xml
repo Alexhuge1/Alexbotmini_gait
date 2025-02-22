@@ -50,6 +50,7 @@
         <geom name="ground" type="plane" size="0 0 1" pos="0.001 0 0" quat="1 0 0 0" material="matplane" condim="1" conaffinity='15'/>
         <body name="base_link" pos="0 0 0.72">
             <inertial pos="-5.403e-06 0.00054897 -0.042272" quat="0.99965 0.025389 -0.00023109 -0.00745309" mass="3.703" diaginertia="0.0394207 0.0253231 0.0208888" />
+
             <joint name="floating_base_joint" type="free" limited="false" />
             <site name='imu' size='0.01' pos='0.0 0 0.0' quat='1 0 0 0'/>
 

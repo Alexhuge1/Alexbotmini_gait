@@ -1,0 +1,17 @@
+{"time":"2025-02-21T20:10:18.583005501+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts/wandb/run-20250221_201018-denyqanu/logs/debug-core.log"}
+{"time":"2025-02-21T20:10:18.686170255+08:00","level":"INFO","msg":"created new stream","id":"denyqanu"}
+{"time":"2025-02-21T20:10:18.68621479+08:00","level":"INFO","msg":"stream: started","id":"denyqanu"}
+{"time":"2025-02-21T20:10:18.686242285+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"denyqanu"}
+{"time":"2025-02-21T20:10:18.68627254+08:00","level":"INFO","msg":"handler: started","stream_id":"denyqanu"}
+{"time":"2025-02-21T20:10:18.686330213+08:00","level":"INFO","msg":"sender: started","stream_id":"denyqanu"}
+{"time":"2025-02-21T20:10:19.28387984+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T20:10:29.380406033+08:00","level":"INFO","msg":"tensorboard: no root directory after 10 seconds, using working directory"}
+{"time":"2025-02-21T20:10:29.380604321+08:00","level":"ERROR","msg":"tensorboard: file is not under TB root","rootDir":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/humanoid/scripts","path":"/home/alexhuge/Documents/GitHub/Alexbotmini_gait/Lowerbody/humanoid-gym/logs/alexbotmini/Feb21_20-10-12_/events.out.tfevents.1740139819.alexhuge4090d.493431.0"}
+{"time":"2025-02-21T20:20:38.689427562+08:00","level":"INFO","msg":"stream: closing","id":"denyqanu"}
+{"time":"2025-02-21T20:20:38.689446765+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T20:20:38.690103005+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T20:20:40.20368241+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T20:20:40.668479239+08:00","level":"INFO","msg":"handler: closed","stream_id":"denyqanu"}
+{"time":"2025-02-21T20:20:40.668553563+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"denyqanu"}
+{"time":"2025-02-21T20:20:40.668573641+08:00","level":"INFO","msg":"sender: closed","stream_id":"denyqanu"}
+{"time":"2025-02-21T20:20:40.668761842+08:00","level":"INFO","msg":"stream: closed","id":"denyqanu"}

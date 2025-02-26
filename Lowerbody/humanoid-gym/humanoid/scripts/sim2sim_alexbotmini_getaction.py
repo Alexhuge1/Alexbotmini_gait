@@ -192,14 +192,14 @@ if __name__ == '__main__':
                 mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/alexbotmini.xml'
             else:
                 mujoco_model_path = f'{LEGGED_GYM_ROOT_DIR}/resources/robots/alexbotmini/mjcf/scene.xml'
-            sim_duration = 30.0
+            sim_duration = 6.0
             # sim_duration = 3.0
             dt = 0.001
             decimation = 10
 
         class robot_config:
-            kps = np.array([180, 120, 120, 180, 45, 45, 180, 120, 120, 180, 45, 45], dtype=np.double)
-            kds = np.array([10, 8, 8, 10, 4, 4, 10, 8, 8, 10, 4, 4,], dtype=np.double)
+            kps = np.array([180, 200, 120, 180, 120, 120, 180, 200, 120, 180, 120, 120], dtype=np.double)*0.4
+            kds = np.array([ 10, 8, 8, 10, 6, 6, 10, 8, 8, 10, 6, 6,], dtype=np.double)*0.8
             tau_limit = 200. * np.ones(12, dtype=np.double)
 
     policy = torch.jit.load(args.load_model)
